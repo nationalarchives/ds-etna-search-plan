@@ -16,5 +16,5 @@ Each iteration will be versioned and described here with an explanation of **how
 
 ### 0.0.0 Project outset
 
-This [version](Iterations/0.0.0/) shows the existing Etna pages at the project outset. Search is not represented.
+This [version](Iterations/0.0.0/) shows high-level assumptions about the scope of this phase of work and a **very** high level representation of a user flow.
 
