@@ -22,7 +22,7 @@ On 24/11 a meeting was held to sign off the flow before starting to wireframe. T
 
 * Update flow to acknowledge known problems with word 'Advanced' in search (Jenifer)
 * Include arrows between columns (Matt H) 
-* Provide tips to reduce the number of results (Matt H - as part of results page) - and with ability to hide them - and for the choice to be persisted
+* Provide tips to reduce or increase the number of results (Matt H - as part of results page) - and with ability to hide them - and for the choice to be persisted
 * Add record custodian (Matt H)
 
 ### 0.0.1 Project outset (additional suggestions)
