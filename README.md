@@ -20,7 +20,7 @@ Each iteration will be versioned and described here with an explanation of **how
 
 On 24/11 a meeting was held to sign off the flow before starting to wireframe. This [version](Iterations/0.0.2) reflects all additions from that session:
 
-* Update flow to acknowledge known problems with word 'Advanced' in search (Jenifer)
+* Update flow to acknowledge known problems with word 'Advanced' in search (Jenifer). Propose using 'Default search page' (Simon).
 * Include arrows between columns (Matt H) 
 * Provide tips to reduce or increase the number of results (Matt H - as part of results page) - and with ability to hide them - and for the choice to be persisted
 * Add record custodian (Matt H)
