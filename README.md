@@ -4,6 +4,7 @@ Use this contents list to navigate the page
 
 * [Introduction](#introduction)
 * Iterations
+    * [0.1.0](#010-updates-to-reflect-interactive-wireframes)
     * [0.0.2](#002-flow-sign-off-session)
     * [0.0.1](#001-project-outset-additional-suggestions)
     * [0.0.0](#000-project-outset)
@@ -15,6 +16,10 @@ This repository sets out iterations of the user flow for the Etna search project
 Each iteration will be versioned and described here with an explanation of **how and why** it differs from its predecessor. PDF and `.xml` versions that can be opened for editing on [app.diagrams.net](https://app.diagrams.net) are linked to below and available in the corresponding folder within this repository (for example, to access the resources for iteration 0.0.0 you would go to the `Iterations/0.0.0/` folder in this repository)
 
 ## Iterations
+
+### 0.1.0 Updates to reflect interactive wireframes
+
+This iteration updates [the flow](Iterations/0.1.0) to reflect pages and interactions present in the UXPin interactive wireframe. This has been shared with the team and feedback received incorporated. The details of feedback received has been captured in [the Wiki](https://github.com/nationalarchives/ds-etna-search/wiki/Feedback-to-proposed-0.1.0-flow-iteration)
 
 ### 0.0.2 Flow sign-off session
 
