@@ -1,0 +1,66 @@
+.header {
+    background-color: $color__dark;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    &__logo {
+        align-self: center;
+        margin-left: 1rem;
+        &-image {
+            width: 100px;
+        }
+
+        &:hover {
+            outline: 5px solid $color__white;
+        }
+        &:focus {
+            outline-color: $color__focus-blue-outline-dark-bg;
+        }
+    }
+    &__nav {
+        margin-left: auto;
+        align-items: flex-end;
+
+        &-list {
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 32rem;
+            margin-bottom: 0;
+            justify-content: space-evenly;
+            &-item {
+                list-style: none;
+                height: 3rem;
+                display: block;
+                &-link {
+                    display: block;
+                    color: $color__white;
+                    padding: 7px;
+                    height: 100%;
+                    text-decoration: none;
+                    &:hover, &[aria-current=true], &:focus {
+                        background-color: $color__white;
+                        color: $color__black;
+                    }
+
+                    &:focus {
+                        outline-color: $color__focus-blue-outline-dark-bg;
+                    }
+
+                    &-search {
+                        width: 3rem;
+                        background-image: url('/static/icons/search-white.svg');
+                        background-repeat: no-repeat;
+                        background-position-x: center;
+                        background-position-y: 0.4rem;
+                        background-size: 1.5rem;
+                        &[aria-current=true] {
+                            background-image: url('/static/icons/search-black.svg');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

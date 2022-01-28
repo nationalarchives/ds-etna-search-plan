@@ -1,0 +1,27 @@
+<header class="header">
+  <a href="/" class="header__logo"
+    ><img
+      src="{{ url_for('static', filename='images/tna-square-white-logo.svg') }}"
+      class="header__logo-image"
+  /></a>
+  <nav class="header__nav">
+    <ul class="header__nav-list">
+      <li class="header__nav-list-item">
+        <a class="header__nav-list-item-link" href="#">Explore</a>
+      </li>
+      <li class="header__nav-list-item">
+        <a class="header__nav-list-item-link" href="#">What's on</a>
+      </li>
+      <li class="header__nav-list-item">
+        <a class="header__nav-list-item-link" href="#">Visit</a>
+      </li>
+      <li class="header__nav-list-item">
+        <a class="header__nav-list-item-link" href="#">Learn</a>
+      </li>
+      <li class="header__nav-list-item">
+        <a class="header__nav-list-item-link header__nav-list-item-link-search" href="/search" aria-current="true">
+            <span class="sr-only">Search</span></a>
+      </li>
+    </ul>
+  </nav>
+</header>

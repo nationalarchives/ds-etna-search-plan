@@ -3552,4 +3552,78 @@ a {
   .tna-hero-banner__image {
     overflow: hidden; }
 
+.sr-only {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  margin: -0.0625rem;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  background-color: black !important;
+  color: white !important; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto; }
+
+.skip-to-content-link {
+  background-color: #ffffff;
+  padding: .2rem; }
+
+.header {
+  background-color: #26262a;
+  height: 8rem;
+  display: flex;
+  flex-wrap: wrap; }
+  .header__logo {
+    align-self: center;
+    margin-left: 1rem; }
+    .header__logo-image {
+      width: 100px; }
+    .header__logo:hover {
+      outline: 5px solid #ffffff; }
+    .header__logo:focus {
+      outline-color: #8EC0EC; }
+  .header__nav {
+    margin-left: auto;
+    align-items: flex-end; }
+    .header__nav-list {
+      display: flex;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 32rem;
+      margin-bottom: 0;
+      justify-content: space-evenly; }
+      .header__nav-list-item {
+        list-style: none;
+        height: 3rem;
+        display: block; }
+        .header__nav-list-item-link {
+          display: block;
+          color: #ffffff;
+          padding: 7px;
+          height: 100%;
+          text-decoration: none; }
+          .header__nav-list-item-link:hover, .header__nav-list-item-link[aria-current=true], .header__nav-list-item-link:focus {
+            background-color: #ffffff;
+            color: #000000; }
+          .header__nav-list-item-link:focus {
+            outline-color: #8EC0EC; }
+          .header__nav-list-item-link-search {
+            width: 3rem;
+            background-image: url("/static/icons/search-white.svg");
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 0.4rem;
+            background-size: 1.5rem; }
+            .header__nav-list-item-link-search[aria-current=true] {
+              background-image: url("/static/icons/search-black.svg"); }
+
 /*# sourceMappingURL=search.css.map */
