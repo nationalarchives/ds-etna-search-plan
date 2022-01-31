@@ -1,6 +1,0 @@
-<form action="{{ url_for('catalogue_results') }}" role="search" aria-label="Search by keyword" id="analytics-catalogue-search">
-    {{ form.csrf_token }}
-    <label for="search_term" class="search-component__search-term-label">{{ form.search_term.label }}</label>
-    {{ form.search_term }}
-    <input type="submit" value="Search">
-</form>

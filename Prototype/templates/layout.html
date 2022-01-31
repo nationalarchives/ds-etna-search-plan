@@ -8,8 +8,9 @@
     <title>Search prototype</title>
 </head>
 <body>
+    <a id="skip-to-main-content" href="#main-content" class="sr-only sr-only-focusable">Skip to Main Content</a>
     {% include 'includes/header.html' %}
-    <main>
+    <main id="main-content">
         {% block content %}
         {% endblock %}
     </main>

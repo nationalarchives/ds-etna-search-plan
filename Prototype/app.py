@@ -12,5 +12,5 @@ def hello_world():
 @app.route("/search")
 def catalogue_results():
     form = CatalogueSearch()
-    return render_template("catalogue_results.html", form=form);
+    return render_template("catalogue_results.html", form=form, search_type="Catalogue results", search_term="Churchill");
 

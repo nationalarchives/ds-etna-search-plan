@@ -1,0 +1,26 @@
+<div class="search-results-hero">
+    <h1 class="search-results-hero__heading">Search results <span class="sr-only">for {{search_term}}</span></h1>
+    <form action="{{ url_for('catalogue_results') }}" role="search" aria-label="Search by keyword" id="analytics-catalogue-search" class="search-results-hero__form">
+        {{ form.csrf_token }}
+        {{ form.search_term.label(class='sr-only') }}
+        {{ form.search_term }}
+        <input type="submit" value="Search" class="search-results-hero__form-submit">
+    </form>
+    <h2 class="sr-only">{{search_type}}</h2>
+    <nav class="search-results-hero__nav">
+        <ul class="search-results-hero__nav-list">
+            <li class="search-results-hero__nav-list-item">
+                <a href="#" class="search-results-hero__nav-link">Featured results</a>
+            </li>
+            <li class="search-results-hero__nav-list-item">
+                <a href="/search" aria-current="true" class="search-results-hero__nav-link">Catalogue results</a>
+            </li>
+            <li class="search-results-hero__nav-list-item">
+                <a href="#" class="search-results-hero__nav-link">Website results</a>
+            </li>
+            <li class="search-results-hero__nav-list-item-new-search">
+                <a href="#" class="search-results-hero__nav-link-new-search">New search</a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -6,6 +6,8 @@ class CatalogueSearch(FlaskForm):
         'Search term',
         validators=[InputRequired()],
         render_kw={
-            'class': 'search-component__search-term-input'
+            'class': 'search-results-hero__form-search-box',
+            'role': 'search',
+            'value': 'Churchill'
         }
     )
