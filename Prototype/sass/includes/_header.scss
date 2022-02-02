@@ -39,6 +39,10 @@
                     padding: 7px;
                     height: 100%;
                     text-decoration: none;
+                    &:visited {
+                        color: $color__white;
+                    }
+                    
                     &:hover, &[aria-current=true], &:focus {
                         background-color: $color__grey-1;
                         color: $color__black;

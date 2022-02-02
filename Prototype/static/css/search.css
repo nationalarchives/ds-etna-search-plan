@@ -3611,6 +3611,8 @@ a {
           padding: 7px;
           height: 100%;
           text-decoration: none; }
+          .header__nav-list-item-link:visited {
+            color: #ffffff; }
           .header__nav-list-item-link:hover, .header__nav-list-item-link[aria-current=true], .header__nav-list-item-link:focus {
             background-color: #F1F1F1;
             color: #000000; }
@@ -3682,5 +3684,40 @@ a {
         color: #000000; }
       .search-results-hero__nav-link-new-search {
         display: block; }
+        .search-results-hero__nav-link-new-search:visited {
+          color: #1A67A2; }
+
+.search-buckets__list {
+  display: flex;
+  margin: 0;
+  padding: 0; }
+  .search-buckets__list-item {
+    display: inline-block;
+    list-style: none;
+    margin-left: 3rem;
+    max-width: 200px;
+    min-height: 100px; }
+    .search-buckets__list-item:first-of-type {
+      margin-left: 2rem; }
+    .search-buckets__list-item:last-of-type {
+      margin-right: 2rem; }
+.search-buckets__link {
+  text-align: center;
+  padding: 14px;
+  display: block;
+  border: 1px solid #dddddd;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+  height: 100%;
+  color: #1A67A2;
+  display: flex;
+  align-items: center; }
+  .search-buckets__link:visited {
+    color: #1A67A2; }
+  .search-buckets__link[aria-current=true], .search-buckets__link:hover, .search-buckets__link:focus {
+    background-color: #1A67A2;
+    color: #fff; }
 
 /*# sourceMappingURL=search.css.map */
