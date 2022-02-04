@@ -3758,5 +3758,7 @@ a {
       .search-sort-view__icon-grid[aria-current=true], .search-sort-view__icon-grid:focus, .search-sort-view__icon-grid:hover {
         background-image: url("/static/icons/grid-selected.svg");
         background-color: #1A67A2; }
+  .search-sort-view__link:visited {
+    color: #1A67A2; }
 
 /*# sourceMappingURL=search.css.map */
