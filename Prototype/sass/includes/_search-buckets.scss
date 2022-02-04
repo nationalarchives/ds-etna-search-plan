@@ -1,20 +1,18 @@
 .search-buckets {
     &__list {
         display: flex;
+        flex-wrap: wrap;
         margin: 0;
-        padding: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        justify-content: space-between;
         &-item {
             display: inline-block;
             list-style: none;
-            margin-left: 3rem;
-            &:first-of-type {
-                margin-left: 2rem;
-            }
-            &:last-of-type {
-                margin-right: 2rem;
-            }
-            max-width: 200px;
+            width: 250px;
+            margin-right: 1rem;
             min-height: 100px;
+            margin-bottom: 1rem;
         }
     }
 
@@ -31,6 +29,7 @@
         color: $color__blue_4;
         display: flex;
         align-items: center;
+        justify-content: center;
         &:visited {
             color: $color__blue_4;
         }
