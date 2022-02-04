@@ -4,6 +4,7 @@ Use this contents list to navigate the page
 
 * [Introduction](#introduction)
 * Iterations
+    * [0.1.1](#011-add-tabs-to-results-and-change-bucket-name)
     * [0.1.0](#010-updates-to-reflect-interactive-wireframes)
     * [0.0.2](#002-flow-sign-off-session)
     * [0.0.1](#001-project-outset-additional-suggestions)
@@ -16,6 +17,10 @@ This repository sets out iterations of the user flow for the Etna search project
 Each iteration will be versioned and described here with an explanation of **how and why** it differs from its predecessor. PDF and `.xml` versions that can be opened for editing on [app.diagrams.net](https://app.diagrams.net) are linked to below and available in the corresponding folder within this repository (for example, to access the resources for iteration 0.0.0 you would go to the `Iterations/0.0.0/` folder in this repository)
 
 ## Iterations
+
+### 0.1.1 Add tabs to results and change bucket name
+
+This iteration update [the flow](Iterations/0.1.1) to reflect design changes which introduce tabs onto the search results page and a decision that 'Archives in the UK and beyond' should be prefixed with 'Directory of...'
 
 ### 0.1.0 Updates to reflect interactive wireframes
 
