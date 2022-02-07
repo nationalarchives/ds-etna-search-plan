@@ -13,6 +13,7 @@
             margin-right: 1rem;
             min-height: 100px;
             margin-bottom: 1rem;
+            font-family: $font__supria-sans;
         }
     }
 
@@ -35,8 +36,8 @@
         }
 
         &[aria-current=true], &:hover, &:focus {
-            background-color: $color__blue_4;
-            color: #fff;
+            background-color: $color__yellow_2;
+            color: #000;
 
         }
     }

@@ -1,5 +1,5 @@
 .header {
-    background-color: $color__dark;
+    background-color: $color__yellow_2;
     height: 8rem;
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +14,7 @@
             outline: 5px solid $color__white;
         }
         &:focus {
-            outline-color: $color__focus-blue-outline-dark-bg;
+            outline-color: $color__black;
         }
     }
     &__nav {
@@ -35,12 +35,14 @@
                 display: block;
                 &-link {
                     display: block;
-                    color: $color__white;
+                    color: $color__black;
                     padding: 7px;
                     height: 100%;
                     text-decoration: none;
+                    font-family: $font__supria-sans;
+                    font-weight: normal;
                     &:visited {
-                        color: $color__white;
+                        color: $color__black;
                     }
                     
                     &:hover, &[aria-current=true], &:focus {
@@ -49,7 +51,7 @@
                     }
 
                     &:focus {
-                        outline-color: $color__focus-blue-outline-dark-bg;
+                        outline-color: $color__black;
                     }
 
                     &-search {

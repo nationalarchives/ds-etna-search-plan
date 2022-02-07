@@ -5,6 +5,7 @@
     &__heading {
         margin-top: 0;
         font-weight: normal;
+        font-family: $font__supria-sans;
     }
 
     &__form {
@@ -44,7 +45,7 @@
             &-item {
                 display: inline-block;
                 margin-right: 2rem;
-
+                font-family: $font__supria-sans;
                 &-new-search {
                     display: inline-block;
                     margin-left: auto;
@@ -68,7 +69,7 @@
 
             &[aria-current=true], &:hover, &:focus {
                 background-color: $color__white;
-                border-top: .3rem solid $color__blue_4;
+                border-top: .3rem solid $color__yellow_2;
                 border-left: 0;
                 border-right: 0;
                 color: $color__black;
