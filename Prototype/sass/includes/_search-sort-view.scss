@@ -3,24 +3,37 @@
 
     &__heading {
         font-size: 1rem;
-        font-weight: normal;
         margin: 0;
-        &:first-of-type {
-            margin-left: auto;
+        font-family: $font__supria-sans;
+    }
+
+    &__form {
+        margin-left: auto;
+        &-select {
+            padding: 0.2rem;
+            width: 10rem;
+            height: 2.3rem;
+
+            &:focus {
+                outline: 5px solid $color__focus-blue-outline-light-bg;
+            }
         }
+        &-submit {
+            @extend .tna-button;
+            padding: 0.2rem;
+            cursor: pointer;
+        }
+
     }
 
     &__list {
         display: flex;
+        align-items: center;
 
         margin-bottom: 0;
         margin-right: 3rem;
-
-        &:first-of-type {
-            margin-right: 1rem;
-        }
         padding: 0;
-
+        
         &-item {
             display: inline-block;
             margin-left: .5rem;
