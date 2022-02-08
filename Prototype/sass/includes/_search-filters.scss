@@ -1,0 +1,9 @@
+.search-filters {
+    &__submit {
+        @extend .tna-button;
+    }
+
+    &__label, &__checkbox, &__submit {
+        cursor: pointer;
+    }
+}

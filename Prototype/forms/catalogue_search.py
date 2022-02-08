@@ -8,6 +8,5 @@ class CatalogueSearch(FlaskForm):
         render_kw={
             'class': 'search-results-hero__form-search-box',
             'role': 'search',
-            'value': 'Churchill'
         }
     )

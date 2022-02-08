@@ -1,6 +1,6 @@
 .header {
     background-color: $color__yellow_2;
-    height: 8rem;
+    min-height: 8rem;
     display: flex;
     flex-wrap: wrap;
     &__logo {

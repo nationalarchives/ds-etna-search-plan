@@ -1,0 +1,27 @@
+.search-grid {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    &__filters {
+        background-color: $color__grey-5;
+        border: 1px solid $color__grey-4;
+        padding: 1rem;
+
+        @media only screen and (max-width: $screen__xl) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__results {
+        border-top: 4px dotted $color__grey-4;
+        margin-left: 1rem;
+        padding: 1rem;
+        @media only screen and (max-width: $screen__xl) {
+            grid-column: 1 / -1;
+            border-top: 0;
+        }
+    }
+    
+}

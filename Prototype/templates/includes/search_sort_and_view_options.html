@@ -1,15 +1,16 @@
 <div class="search-sort-view">
-    <form aria-label="Sort search results" class="search-sort-view__form">
+    <div class="search-sort-view__form">
         <label for="search-sort-select">
             <h3 class="search-sort-view__heading">Sort by</h3>
         </label>
-        <select id="search-sort-select" class="search-sort-view__form-select">
+        <select id="search-sort-select" class="search-sort-view__form-select" name="sort">
             <option selected>Relevance</option>
             <option>Date</option>
             <option>Title</option>
         </select>
         <input type="submit" value="Update" class="search-sort-view__form-submit">
-    </form>
+    </div>
+
     <h3 class="search-sort-view__heading"><span class="sr-only">Display as:</span></h3>
     <ul class="search-sort-view__list">
         <li class="search-sort-view__list-item">
