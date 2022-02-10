@@ -1,13 +1,7 @@
 <div class="search-sort-view">
     <div class="search-sort-view__form">
-        <label for="search-sort-select">
-            <h3 class="search-sort-view__heading">Sort by</h3>
-        </label>
-        <select id="search-sort-select" class="search-sort-view__form-select" name="sort">
-            <option selected>Relevance</option>
-            <option>Date</option>
-            <option>Title</option>
-        </select>
+        <h3 class="search-sort-view__heading">{{form.sort_by.label}}</h3>
+        {{form.sort_by}}
         <input type="submit" value="Update" class="search-sort-view__form-submit">
     </div>
 

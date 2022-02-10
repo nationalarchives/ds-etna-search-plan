@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from forms.catalogue_search import CatalogueSearch
-import os
+import os, json
 app = Flask(__name__)
 SECRET_KEY = os.urandom(32)
 app.config['SECRET_KEY'] = SECRET_KEY
@@ -11,6 +11,6 @@ def hello_world():
 
 @app.route("/search")
 def catalogue_results():
-    form = CatalogueSearch()
+    form = CatalogueSearch(request.args, meta = {'csrf': False})
     return render_template("catalogue_results.html", form=form, search_type="Catalogue results", search_term="Churchill");
 

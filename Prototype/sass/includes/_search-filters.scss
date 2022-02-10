@@ -7,6 +7,7 @@
     &__submit {
         @extend .tna-button;
         display: block;
+        margin-top: 0.5rem;
     }
 
     &__label, &__checkbox, &__submit {
@@ -14,10 +15,11 @@
     }
 
     &__label {
-        margin-left: 0.25rem;
-
+        max-width: 80%;
+        vertical-align: top;
         &--block {
             display: block;
+            max-width: 100%;
         }
     }
 
@@ -41,7 +43,7 @@
         }
     }
 
-    &__date {
+    &__checkbox {
         margin-bottom: 1rem;
         margin-right: 0.5rem;
     }
