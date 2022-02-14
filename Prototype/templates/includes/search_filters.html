@@ -32,20 +32,10 @@
             
         </div>
         <div class="search-filters__accordion-section">
-            <fieldset>
-                <legend>
-                    <h5 class="search-filters__accordion-section-heading">Collection</h5></legend>
-                {% for collection_field_key in form.meta.collections %}
-                <div>
-                    {{form[collection_field_key]}}
-                    {{form[collection_field_key].label(class='search-filters__label')}}
-                </div>
-                {% endfor %}
-            <input type="submit" value="Update" class="search-filters__submit">
-            </fieldset>
+            <h5 class="search-filters__accordion-section-heading"><a href="#" class="search-filters__accordion-section-link">Collection</a></h5>
         </div>
         <div class="search-filters__accordion-section">
-            <h5 class="search-filters__accordion-section-heading"><a href="#">Topics</a></h5>
+            <h5 class="search-filters__accordion-section-heading"><a href="#" class="search-filters__accordion-section-link">Topics</a></h5>
         </div>
         <div class="search-filters__accordion-section">
             <fieldset>

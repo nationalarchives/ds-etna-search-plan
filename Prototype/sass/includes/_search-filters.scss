@@ -41,6 +41,14 @@
             font-size: 1rem;
             font-weight: normal;
         }
+
+        &-link {
+            color: $color__blue_4;
+
+            &:visited, &:hover {
+                color: $color__blue_4;
+            }
+        }
     }
 
     &__checkbox {

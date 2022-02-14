@@ -86,37 +86,6 @@ class CatalogueSearch(FlaskForm):
         'class': 'search-filters__checkbox'
     })
 
-    collection_WO = BooleanField('WO - War Office, Armed Forces, Judge Advocate General, and related bodies', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_BT = BooleanField('BT - Board of Trade and successors', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_ADM = BooleanField('ADM - Admiralty, Navy, Royal Marines, and Coastguard', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_HO = BooleanField('HO - Home Office', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_C = BooleanField('C - Chancery, the Wardrobe, Royal Household, Exchequer and various commissions', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_PROB = BooleanField('PROB - Prerogative Court of Canterbury', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_AIR = BooleanField('AIR - Air Ministry and Royal Air Force records', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_FO = BooleanField('FO - Foreign Office', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_E = BooleanField('E - Exchequer, Office of First Fruits and Tenths, and the Court of Augmentations', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-    collection_IR = BooleanField('IR - Boards of Stamps, Taxes, Excise, Stamps and Taxes, and Inland Revenue', render_kw = {
-        'class': 'search-filters__checkbox'
-    })
-
     level_item = BooleanField('Item', render_kw = {
         'class': 'search-filters__checkbox'
     })
@@ -210,18 +179,6 @@ class CatalogueSearch(FlaskForm):
             'date_1100to1199',
             'date_1000to1099',
             'date_1to999']
-        collections = [
-            'collection_WO',
-            'collection_BT',
-            'collection_ADM',
-            'collection_HO',
-            'collection_C',
-            'collection_PROB',
-            'collection_AIR',
-            'collection_FO',
-            'collection_E',
-            'collection_IR',
-        ]
         levels = [
             'level_item',
             'level_piece',
