@@ -9,6 +9,7 @@ Use this contents list to navigate the page
     * [0.0.2](#002-flow-sign-off-session)
     * [0.0.1](#001-project-outset-additional-suggestions)
     * [0.0.0](#000-project-outset)
+* [Details pages](#details-pages)
 
 ## Introduction
 
@@ -49,3 +50,6 @@ The inclusion of record creators as a search option also means we'll need to hav
 
 This [version](Iterations/0.0.0/) shows high-level assumptions about the scope of this phase of work and a **very** high level representation of a user flow.
 
+## Details pages
+
+Diagrams showing the initial different types of details pages that will be included in Etna are can be found in the [details pages directory](Details%20pages)
