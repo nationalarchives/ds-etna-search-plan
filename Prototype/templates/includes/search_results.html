@@ -4,35 +4,13 @@
         <p class="search-results__metadata-count">
         Showing <span class="search-results__metadata-count-highlight">20,000</span> (of 42,403) results for 'Churchill' in 'All records from The National Archives'
         </p>
-        <h4 class="sr-only">Selected filters</h4>
-        <ul class="search-results__selected-filters">
-            <li class="search-results__selected-filters-item">
-                Filter
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
-            </li>
-            <li class="search-results__selected-filters-item">
-                Filter with a longer name
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
-            </li>
-            <li class="search-results__selected-filters-item">
-                Filter with an even longer filter name
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
-            </li>
-            <li class="search-results__selected-filters-item">
-                Filter with a longer name
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
-            </li>
-            <li class="search-results__selected-filters-item">
-                Filter with a longer name
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
-            </li>
-            <li class="search-results__selected-filters-item">
-                Filter with a longer name
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
-            </li>
-            <li class="search-results__selected-filters-item-remove-all">
-                <a href="#" class="search-results__selected-filters-item-remove-all-link">Remove all filters</a>
-            </li>
-        </ul>
+        {% include 'includes/search_results__selected-filters.html' %}
     </div>
+
+    <ul class="search-results__list">
+        {% include 'includes/search_results__list-card.html' %}
+        {% include 'includes/search_results__list-card.html' %}
+        {% include 'includes/search_results__list-card.html' %}
+
+    </ul>
 </div>
