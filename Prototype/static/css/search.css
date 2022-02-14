@@ -3827,5 +3827,9 @@ a {
 .search-filters__checkbox {
   margin-bottom: 1rem;
   margin-right: 0.5rem; }
+.search-filters__opening-date {
+  min-width: 5rem; }
+  .search-filters__opening-date-section {
+    margin-bottom: 1rem; }
 
 /*# sourceMappingURL=search.css.map */

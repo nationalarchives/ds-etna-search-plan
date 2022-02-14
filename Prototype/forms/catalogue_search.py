@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms.fields import SearchField, BooleanField, SelectField, SelectMultipleField
-from wtforms.validators import InputRequired
+from wtforms.fields import SearchField, BooleanField, SelectField, IntegerField
+from wtforms.validators import InputRequired, NumberRange
 
 
 class CatalogueSearch(FlaskForm):
@@ -146,7 +146,53 @@ class CatalogueSearch(FlaskForm):
         'class': 'search-filters__checkbox'
     })
 
-    
+    opening_date_from_yy = IntegerField('Opening date (from year)', render_kw = {
+        'class': 'search-filters__opening-date',
+        'placeholder': 'YYYY',
+        'aria-labelledby': 'record_opening_date opening_date_from',
+        'aria-describedby': 'search_filters__opening-date-help-text'
+    },
+    validators=[NumberRange(min=974, max=2022)])
+
+    opening_date_from_mm = IntegerField('Opening date (from month)', render_kw = {
+        'class': 'search-filters__opening-date',
+        'placeholder': 'MM',
+        'aria-labelledby': 'record_opening_date opening_date_from',
+        'aria-describedby': 'search_filters__opening-date-help-text'
+    },
+    validators=[NumberRange(min=1, max=12)])
+
+    opening_date_from_dd = IntegerField('Opening date (from day)', render_kw = {
+        'class': 'search-filters__opening-date',
+        'placeholder': 'DD',
+        'aria-labelledby': 'record_opening_date opening_date_from',
+        'aria-describedby': 'search_filters__opening-date-help-text'
+    },
+    validators=[NumberRange(min=1, max=31)])
+
+    opening_date_to_yy = IntegerField('Opening date (to year)', render_kw = {
+        'class': 'search-filters__opening-date',
+        'placeholder': 'YYYY',
+        'aria-labelledby': 'record_opening_date opening_date_to',
+        'aria-describedby': 'search_filters__opening-date-help-text'
+    },
+    validators=[NumberRange(min=974, max=2022)])
+
+    opening_date_to_mm = IntegerField('Opening date (to month)', render_kw = {
+        'class': 'search-filters__opening-date',
+        'placeholder': 'MM',
+        'aria-labelledby': 'record_opening_date opening_date_to',
+        'aria-describedby': 'search_filters__opening-date-help-text'
+    },
+    validators=[NumberRange(min=1, max=12)])
+
+    opening_date_to_dd = IntegerField('Opening date (to day)', render_kw = {
+        'class': 'search-filters__opening-date',
+        'placeholder': 'DD',
+        'aria-labelledby': 'record_opening_date opening_date_to',
+        'aria-describedby': 'search_filters__opening-date-help-text'
+    },
+    validators=[NumberRange(min=1, max=31)])
 
     class Meta:
         dates = [

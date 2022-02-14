@@ -74,7 +74,30 @@
             
         </div>
         <div class="search-filters__accordion-section">
-            <h5 class="search-filters__accordion-section-heading">Record opening date</h5>
+            <fieldset>
+                <legend>
+                    <h5 class="search-filters__accordion-section-heading" id="record_opening_date">Record opening date</h5></fieldset>
+                </legend>
+                <p id="search_filters__opening-date-help-text">Helper text here</p>
+                <label id="opening_date_from">From</label>
+                <div class="search-filters__opening-date-section">
+                    {{form.opening_date_from_yy}}
+                    {{form.opening_date_from_mm}}
+                    {{form.opening_date_from_dd}}
+                </div>
+                <label id="opening_date_to">To</label>
+
+                <div class="search-filters__opening-date-section">
+                    {{form.opening_date_to_yy}}
+                    {{form.opening_date_to_mm}}
+                    {{form.opening_date_to_dd}}
+                </div>
+
+                 <input type="submit" value="Update" class="search-filters__submit">
+            </fieldset>
+
+
+
         </div>
     </div>
 </div>

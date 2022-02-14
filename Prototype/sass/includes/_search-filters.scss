@@ -47,4 +47,11 @@
         margin-bottom: 1rem;
         margin-right: 0.5rem;
     }
+    &__opening-date {
+        min-width: 5rem;
+
+        &-section {
+            margin-bottom: 1rem;
+        }
+    }
 }
