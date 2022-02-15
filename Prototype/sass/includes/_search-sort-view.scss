@@ -57,7 +57,7 @@
 
             &[aria-current=true], &:focus, &:hover {
                 background-image: url('/static/icons/list-selected.svg');   
-                background-color: $color__blue_4;
+                background-color: $color__yellow_2;
             }
         }
 
@@ -67,7 +67,7 @@
 
             &[aria-current=true], &:focus, &:hover {
                 background-image: url('/static/icons/grid-selected.svg');
-                background-color: $color__blue_4;
+                background-color: $color__yellow_2;
             }
         }
     }
