@@ -1,0 +1,32 @@
+.featured-results {
+
+    &__heading {
+        font-family: $font__supria-sans;
+    }
+
+    &__record-creator {
+        padding: 1rem;
+        background-color: $color__grey_1;
+        display: flex;
+
+        &-description {
+            margin-right: auto;
+            margin-left: 2rem;
+        }
+
+        &-heading {
+            font-family: $font__supria-sans;
+            font-size: 1.7rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+            &--smaller {
+                @extend .featured-results__record-creator-heading;
+                font-size: 1.3rem;
+            }
+        }
+
+        &-paragraph {
+            margin-bottom: 0.5rem;
+        }
+    }
+}

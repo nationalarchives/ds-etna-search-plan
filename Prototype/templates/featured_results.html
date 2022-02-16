@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content%}
+    <form class="search-form" method="GET">
+        {% include 'includes/search_hero.html' %}
+    </form>
+    <div class="featured-search-grid">
+        <div class="featured-search-grid__results">
+            <h2 class="featured-results__heading">Records from The National Archives</h2>
+            <ul class="search-results__list">
+                {% include 'includes/search_results__list-card.html' %}
+                {% include 'includes/search_results__list-card.html' %}
+                {% include 'includes/search_results__list-card.html' %}
+            </ul>
+            <p><a href="#">View all records from The National Archives (42,403)</a></p>
+
+            <div class="featured-results__record-creator">
+                <div class="featured-results__record-creator-image">
+                    <a href="#" aria-hidden="true" tabindex="-1">
+                        <img src="https://via.placeholder.com/250x200" alt="" />
+                    </a>
+                </div>
+                <div class="featured-results__record-creator-description">
+                    <h2 class="featured-results__record-creator-heading--smaller">Record creators</h2>
+                    <h3 class="featured-results__record-creator-heading"><a href="">Churchill</a></h3>
+                    <p class="featured-results__record-creator-paragraph">Churchill Parish, Churchill, Oxfordshire</p>
+                    <p class="featured-results__record-creator-paragraph"><a href="#">View all record creators</a></p>
+                </div>
+    
+            </div>
+        </div>
+
+        <div class="featured-search-grid__sidebar">
+            <h2>Research guides</h2>
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+.featured-search-grid {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+
+    &__sidebar {
+        margin-left: 2rem;
+    }
+}

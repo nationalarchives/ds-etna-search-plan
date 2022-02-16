@@ -54,10 +54,15 @@
     &__checkbox {
         margin-bottom: 1rem;
         margin-right: 0.5rem;
+        &:focus {
+            outline: 5px solid $color__focus-blue-outline-light-bg;
+        }
     }
     &__opening-date {
         width: 5rem;
-
+        &:focus {
+            outline: 5px solid $color__focus-blue-outline-light-bg;
+        }
         &-section {
             margin-bottom: 1rem;
         }
