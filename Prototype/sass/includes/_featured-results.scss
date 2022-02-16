@@ -25,8 +25,37 @@
             }
         }
 
+        &-link {
+            color: $color__blue_3;
+
+            &:visited, &:hover {
+                color: $color__blue_3;
+            }
+        }
+
         &-paragraph {
             margin-bottom: 0.5rem;
+        }
+    }
+
+    &__sidebar {
+        &-heading {
+            font-family: $font__supria-sans;
+        }
+
+        &-card {
+
+            &-list {
+                padding-left: 0;
+    
+                &-item {
+                    list-style: none;
+                }
+            }
+
+            &-link {
+                display: inline-block;
+            }
         }
     }
 }

@@ -4065,7 +4065,19 @@ a {
     margin-bottom: 0.5rem; }
     .featured-results__record-creator-heading--smaller {
       font-size: 1.3rem; }
+  .featured-results__record-creator-link {
+    color: #134571; }
+    .featured-results__record-creator-link:visited, .featured-results__record-creator-link:hover {
+      color: #134571; }
   .featured-results__record-creator-paragraph {
     margin-bottom: 0.5rem; }
+.featured-results__sidebar-heading {
+  font-family: supria-sans-condensed, sans-serif; }
+.featured-results__sidebar-card-list {
+  padding-left: 0; }
+  .featured-results__sidebar-card-list-item {
+    list-style: none; }
+.featured-results__sidebar-card-link {
+  display: inline-block; }
 
 /*# sourceMappingURL=search.css.map */
