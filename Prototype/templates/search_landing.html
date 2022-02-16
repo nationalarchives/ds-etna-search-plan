@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content%}
+    <form class="search-form" method="GET" action="/search/featured">
+        {% include 'includes/search_landing_hero.html' %}
+    </form>
+
+    <div class="search-landing-buckets">
+        <h2 class="search-landing-buckets__heading">Recently added</h2>
+        <div class="search-landing-buckets__container--bordered">
+            {% with buckets=collection_buckets %}
+                {% include 'includes/search_landing_buckets.html' %}
+            {% endwith %}
+        </div>
+        <h2 class="search-landing-buckets__heading">View all results from the catalogue</h2>
+        <div class="search-landing-buckets__container">
+            {% with buckets=catalogue_buckets %}
+                {% include 'includes/search_landing_buckets.html' %}
+            {% endwith %}
+        </div>
+        <h2 class="search-landing-buckets__heading">View all results from the website</h2>
+        <div class="search-landing-buckets__container">
+            {% with buckets=website_buckets %}
+                {% include 'includes/search_landing_buckets.html' %}
+            {% endwith %}
+        </div>
+    </div>
+    
+
+{% endblock %}

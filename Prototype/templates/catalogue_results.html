@@ -3,7 +3,11 @@
 {% block content%}
     <form class="search-form" method="GET">
         {% include 'includes/search_hero.html' %}
-        {% include 'includes/search_buckets.html' %}
+
+            {% with buckets = buckets %}
+                {% include 'includes/search_buckets.html' %}
+            {% endwith %}
+
         {% include 'includes/search_sort_and_view_options.html' %}
         <div class="catalogue-search-grid">
             <div class="catalogue-search-grid__sidebar">
@@ -16,5 +20,6 @@
             </div>
         </div>
     </form>
+
     {% include 'includes/pagination.html' %}
 {% endblock %}
