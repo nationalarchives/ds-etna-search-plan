@@ -42,11 +42,6 @@
 
         &-link {
             display: block;
-            color: $color__blue_4;
-
-            &:visited {
-                color: $color__blue_4;
-            }
         }
 
         @media only screen and (max-width: $screen__lg) {

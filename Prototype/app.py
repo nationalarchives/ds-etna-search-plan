@@ -11,11 +11,9 @@ app.config['SECRET_KEY'] = SECRET_KEY
 
 @app.route("/")
 def index():
-    return """<p>
-    <a href='/search'>Go to /search</a>
-    </p>"""
+    return render_template("index.html")
 
-@app.route("/search")
+@app.route("/search/")
 def search():
     form = LandingSearch(request.args, meta = {'csrf': False})
     return render_template("search_landing.html", form=form,
@@ -40,7 +38,7 @@ def search():
     ]
     );
 
-@app.route("/search/catalogue")
+@app.route("/search/catalogue/")
 def catalogue_results():
     form = CatalogueSearch(request.args, meta = {'csrf': False})
     return render_template("catalogue_results.html", form=form, search_type="Catalogue results", search_term="Churchill", selected_tab={'catalogue': True},
@@ -52,12 +50,12 @@ def catalogue_results():
         ('Directory of archives in the UK and beyond', '(12)', False)
     ]);
 
-@app.route("/search/featured")
+@app.route("/search/featured/")
 def featured_results():
     form = FeaturedResults(request.args, meta = {'csrf': False})
     return render_template("featured_results.html", form=form, search_type="Catalogue results", search_term="Churchill", selected_tab={'featured': True});
 
-@app.route("/search/long-filters")
+@app.route("/search/long-filters/")
 def long_filters():
     form = LongFilters(request.args, meta = {'csrf': False})
     return render_template("long_filters.html", form=form)
