@@ -11,6 +11,7 @@
         &-link {
             align-self: center;
             margin-left: 1rem;
+            display: block;
             &:hover {
                 outline: 5px solid $color__grey-8;
             }

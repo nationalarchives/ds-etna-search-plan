@@ -3589,7 +3589,8 @@ a {
     padding: 1rem; }
   .header__logo-link {
     align-self: center;
-    margin-left: 1rem; }
+    margin-left: 1rem;
+    display: block; }
     .header__logo-link:hover {
       outline: 5px solid #4E5A5A; }
     .header__logo-link:focus {
