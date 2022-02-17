@@ -1,10 +1,12 @@
 <header class="header">
-  <a href="/search" class="header__logo"
-    ><img
-      src="{{ url_for('static', filename='images/tna-square-white-logo.svg') }}"
-      class="header__logo-image"
-      alt="The National Archives logo"
-  /></a>
+  <div class="header__logo-holder">
+    <a href="/search" class="header__logo-link"
+      ><img
+        src="{{ url_for('static', filename='images/tna-square-white-logo.svg') }}"
+        class="header__logo-image"
+        alt="The National Archives logo"
+    /></a>
+  </div>
   <nav class="header__nav">
     <ul class="header__nav-list">
       <li class="header__nav-list-item">

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content%}
+<div class="long-filters">
+    <h1 class="long-filters__heading">Select filters to apply to your results</h1>
+    <form method="GET">
+    <div class="long-filters__options">
+        <p><a href="#">Cancel and return to results</a></p>
+        <input type="submit" value="Apply filters" class="long-filters__submit-button"  />
+    </div>
+    <div class="long-filters__form">
+        <div class="long-filters__form-search">
+            {{form.search_within.label(class='long-filters__form-search-label')}}
+            {{form.search_within}}
+            <input type="submit" value="Search" class="long-filters__form-search-button" />
+        </div>
+        <div class="long-filters__form-filters">
+            <fieldset>
+                <legend>Filters</legend>
+                <ul class="long-filters__form-filters-list">
+                    {% for filter in form.meta.filters %}
+                    <li class="long-filters__form-filters-list-item">
+                        {{form[filter]}} 
+                        {{form[filter].label(class='long-filters__form-filters-label')}}
+                    </li>
+                
+                    {% endfor %}
+                </ul>
+            </fieldset>
+        </div>
+    </div>
+    <div class="long-filters__submit-section">
+        <input type="submit" value="Apply filters" class="long-filters__submit-button"  />
+    </div>
+    </form>
+</div>
+{% endblock %}

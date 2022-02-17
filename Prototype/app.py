@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 from forms.catalogue_search import CatalogueSearch
 from forms.featured_results import FeaturedResults
 from forms.landing_search import LandingSearch
+from forms.long_filters import LongFilters
+
 import os, json
 app = Flask(__name__)
 SECRET_KEY = os.urandom(32)
@@ -55,3 +57,7 @@ def featured_results():
     form = FeaturedResults(request.args, meta = {'csrf': False})
     return render_template("featured_results.html", form=form, search_type="Catalogue results", search_term="Churchill", selected_tab={'featured': True});
 
+@app.route("/search/long-filters")
+def long_filters():
+    form = LongFilters(request.args, meta = {'csrf': False})
+    return render_template("long_filters.html", form=form)

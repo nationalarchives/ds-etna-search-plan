@@ -1,20 +1,26 @@
 .header {
     background-color: $color__yellow_2;
-    min-height: 8rem;
     display: flex;
     flex-wrap: wrap;
     &__logo {
-        align-self: center;
-        margin-left: 1rem;
-        &-image {
-            width: 100px;
+
+        &-holder {
+            padding: 1rem;
         }
 
-        &:hover {
-            outline: 5px solid $color__grey-8;
+        &-link {
+            align-self: center;
+            margin-left: 1rem;
+            &:hover {
+                outline: 5px solid $color__grey-8;
+            }
+            &:focus {
+                outline-color: $color__black;
+            }
         }
-        &:focus {
-            outline-color: $color__black;
+        &-image {
+            width: 100px;
+            height: 100px;
         }
     }
     &__nav {
