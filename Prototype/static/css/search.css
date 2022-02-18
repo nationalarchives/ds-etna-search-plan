@@ -3808,34 +3808,62 @@ a {
 
 .catalogue-search-grid {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 2.5fr 8fr;
+  -ms-grid-columns: 2.5fr 8fr;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 2rem; }
+  @media only screen and (max-width: 75rem) {
+    .catalogue-search-grid {
+      -ms-grid-columns: 1fr; } }
   .catalogue-search-grid__sidebar {
     background-color: #efefef;
     border: 1px solid #6f777b;
-    padding: 1rem; }
+    padding: 1rem;
+    -ms-grid-column: 1; }
     @media only screen and (max-width: 75rem) {
       .catalogue-search-grid__sidebar {
-        grid-column: 1 / -1; } }
+        grid-column: 1 / -1;
+        -ms-grid-column: 1;
+        width: 100%; } }
   .catalogue-search-grid__results {
     border-top: 4px dotted #dddddd;
     margin-left: 1rem;
-    padding: 1rem; }
+    padding: 1rem;
+    -ms-grid-column: 2; }
     @media only screen and (max-width: 75rem) {
       .catalogue-search-grid__results {
         grid-column: 1 / -1;
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
         border-top: 0; } }
 
 .featured-search-grid {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 6fr 3fr;
+  -ms-grid-columns: 6fr 3fr;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 2rem; }
+  @media only screen and (max-width: 75rem) {
+    .featured-search-grid {
+      -ms-grid-columns: 1fr; } }
   .featured-search-grid__sidebar {
+    -ms-grid-column: 2;
     margin-left: 2rem; }
+    @media only screen and (max-width: 75rem) {
+      .featured-search-grid__sidebar {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+        grid-column: 1 / -1;
+        margin-left: 0; } }
+  .featured-search-grid__results {
+    -ms-grid-column: 1; }
+    @media only screen and (max-width: 75rem) {
+      .featured-search-grid__results {
+        grid-column: 1 / -1; } }
 
 .search-filters__form-block {
   margin-bottom: 1rem; }
@@ -3965,7 +3993,7 @@ a {
       margin-bottom: 0; }
     .search-results__list-card-delivery-options-link {
       display: block; }
-    @media only screen and (max-width: 62rem) {
+    @media only screen and (max-width: 90rem) {
       .search-results__list-card-delivery-options {
         display: none; } }
 
@@ -4099,6 +4127,8 @@ a {
     list-style: none; }
 .featured-results__sidebar-card-link {
   display: inline-block; }
+.featured-results__sidebar-card-image-fallback {
+  max-width: 100%; }
 
 .search-landing-buckets__heading {
   text-align: center;

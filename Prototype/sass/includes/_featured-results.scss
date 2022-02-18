@@ -48,6 +48,12 @@
             &-link {
                 display: inline-block;
             }
+
+            &-image {
+                &-fallback {
+                    max-width: 100%;
+                }
+            }
         }
     }
 }
