@@ -3997,7 +3997,7 @@ a {
     @media only screen and (max-width: 82rem) {
       .search-results__list-card-delivery-options--catalogue {
         display: none; } }
-    @media only screen and (max-width: 90rem) {
+    @media only screen and (max-width: 89rem) {
       .search-results__list-card-delivery-options--featured {
         display: none; } }
 
