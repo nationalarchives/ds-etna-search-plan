@@ -44,8 +44,19 @@
             display: block;
         }
 
-        @media only screen and (max-width: 90rem) {
-            display: none;
+        &--catalogue {
+            @extend .search-results__list-card-delivery-options;
+            @media only screen and (max-width: 82rem) {
+                display: none;
+            }
         }
+
+        &--featured {
+            @extend .search-results__list-card-delivery-options;
+            @media only screen and (max-width: 90rem) {
+                display: none;
+            }
+        }
+    
     }
 }

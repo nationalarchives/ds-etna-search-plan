@@ -3683,6 +3683,7 @@ a {
       height: 100%;
       padding: 1rem;
       text-decoration: none;
+      color: #000000;
       color: #000000ba;
       border-top: 0.3rem solid #dddddd;
       background-color: #ffffff85; }
@@ -3982,7 +3983,7 @@ a {
       color: #1A67A2; }
   .search-results__list-card-description {
     margin-bottom: 0.5rem; }
-  .search-results__list-card-delivery-options {
+  .search-results__list-card-delivery-options, .search-results__list-card-delivery-options--catalogue, .search-results__list-card-delivery-options--featured {
     margin-left: auto;
     text-align: center;
     margin-right: 1rem; }
@@ -3993,8 +3994,11 @@ a {
       margin-bottom: 0; }
     .search-results__list-card-delivery-options-link {
       display: block; }
+    @media only screen and (max-width: 82rem) {
+      .search-results__list-card-delivery-options--catalogue {
+        display: none; } }
     @media only screen and (max-width: 90rem) {
-      .search-results__list-card-delivery-options {
+      .search-results__list-card-delivery-options--featured {
         display: none; } }
 
 .pagination {
