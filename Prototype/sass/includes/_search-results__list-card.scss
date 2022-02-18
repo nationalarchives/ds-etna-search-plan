@@ -24,6 +24,7 @@
 
     &-description {
         margin-bottom: 0.5rem;
+
     }
 
     &-delivery-options {
@@ -43,20 +44,11 @@
         &-link {
             display: block;
         }
+        
+        @media only screen and (max-width: 91rem) {
+            margin-left: 1rem;
+            margin-top: 1rem;
 
-        &--catalogue {
-            @extend .search-results__list-card-delivery-options;
-            @media only screen and (max-width: 82rem) {
-                display: none;
-            }
         }
-
-        &--featured {
-            @extend .search-results__list-card-delivery-options;
-            @media only screen and (max-width: 89rem) {
-                display: none;
-            }
-        }
-    
     }
 }
