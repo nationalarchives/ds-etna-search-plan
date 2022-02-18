@@ -4162,8 +4162,6 @@ a {
       .long-filters__form-filters-list {
         padding-left: 0;
         display: flex;
-        flex-direction: column;
-        height: 20rem;
         width: 100%;
         flex-wrap: wrap; }
         .long-filters__form-filters-list-item {
