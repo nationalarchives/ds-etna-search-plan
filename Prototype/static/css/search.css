@@ -3736,7 +3736,7 @@ a {
   .search-buckets__list-item {
     display: inline-block;
     list-style: none;
-    width: 250px;
+    width: 18%;
     margin-right: 1rem;
     min-height: 100px;
     margin-bottom: 1rem;
