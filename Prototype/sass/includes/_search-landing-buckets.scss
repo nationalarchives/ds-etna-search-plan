@@ -1,16 +1,15 @@
 .search-landing-buckets {
-
+    margin-left: 2rem;
+    margin-right: 2rem;
     &__heading {
-        text-align: center;
+        margin-left: 4rem;
         font-family: $font__supria-sans;
         font-size: 1.5rem;
     }
 
     &__container {
-        margin-left: 2rem;
-        margin-right: 2rem;
         &--bordered {
-            @extend .search-landing-buckets__container;
+
             border-bottom: 3px dotted $color__grey-4;
         }
     }
@@ -22,7 +21,7 @@
         margin-right: auto;
         padding-left: 2rem;
         padding-right: 2rem;
-        justify-content: center;
+
         &-item {
             display: inline-block;
             list-style: none;

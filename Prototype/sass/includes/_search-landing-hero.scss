@@ -10,6 +10,11 @@
         margin-left: 9rem;
     }
 
+    &__label {
+        font-family: $font__supria-sans;
+        font-size: 1.4rem;
+    }
+
     &__form {
         margin-left: 9rem;
         &-submit {

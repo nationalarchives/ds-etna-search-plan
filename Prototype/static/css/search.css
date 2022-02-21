@@ -3707,6 +3707,9 @@ a {
     font-weight: normal;
     font-family: supria-sans-condensed, sans-serif;
     margin-left: 9rem; }
+  .search-landing-hero__label {
+    font-family: supria-sans-condensed, sans-serif;
+    font-size: 1.4rem; }
   .search-landing-hero__form {
     margin-left: 9rem; }
     .search-landing-hero__form-submit {
@@ -3977,6 +3980,10 @@ a {
     font-family: supria-sans-condensed, sans-serif;
     font-size: 1.7rem;
     letter-spacing: 0.05rem; }
+  .search-results__list-card-content {
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding-right: 1rem; }
   .search-results__list-card-link {
     color: #1A67A2; }
     .search-results__list-card-link:visited {
@@ -3984,8 +3991,6 @@ a {
   .search-results__list-card-description {
     margin-bottom: 0.5rem; }
   .search-results__list-card-delivery-options {
-    margin-left: auto;
-    text-align: center;
     margin-right: 1rem; }
     .search-results__list-card-delivery-options-img {
       border: 1px solid #6f777b; }
@@ -3995,14 +4000,11 @@ a {
       margin-top: 0.2rem; }
     .search-results__list-card-delivery-options-link {
       display: block; }
-    @media only screen and (max-width: 91rem) {
-      .search-results__list-card-delivery-options {
-        margin-left: 1rem;
-        margin-top: 1rem; } }
     @media only screen and (max-width: 48rem) {
       .search-results__list-card-delivery-options {
         margin-left: auto;
-        margin-right: auto; }
+        margin-right: auto;
+        text-align: center; }
         .search-results__list-card-delivery-options-desc {
           max-width: 100%; } }
 
@@ -4139,48 +4141,47 @@ a {
 .featured-results__sidebar-card-image-fallback {
   max-width: 100%; }
 
-.search-landing-buckets__heading {
-  text-align: center;
-  font-family: supria-sans-condensed, sans-serif;
-  font-size: 1.5rem; }
-.search-landing-buckets__container, .search-landing-buckets__container--bordered {
+.search-landing-buckets {
   margin-left: 2rem;
   margin-right: 2rem; }
+  .search-landing-buckets__heading {
+    margin-left: 4rem;
+    font-family: supria-sans-condensed, sans-serif;
+    font-size: 1.5rem; }
   .search-landing-buckets__container--bordered {
     border-bottom: 3px dotted #dddddd; }
-.search-landing-buckets__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  justify-content: center; }
-  .search-landing-buckets__list-item {
-    display: inline-block;
-    list-style: none;
-    width: 250px;
-    margin-right: 1rem;
-    min-height: 100px;
-    margin-bottom: 1rem;
-    font-family: supria-sans-condensed, sans-serif; }
-.search-landing-buckets__link {
-  text-align: center;
-  padding: 14px;
-  display: block;
-  border: 1px solid #dddddd;
-  width: 100%;
-  margin-top: auto;
-  margin-bottom: auto;
-  text-decoration: none;
-  height: 100%;
-  color: #1A67A2;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .search-landing-buckets__link[aria-current=true], .search-landing-buckets__link:hover, .search-landing-buckets__link:focus {
-    background-color: #FFCC00;
-    color: #000; }
+  .search-landing-buckets__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .search-landing-buckets__list-item {
+      display: inline-block;
+      list-style: none;
+      width: 250px;
+      margin-right: 1rem;
+      min-height: 100px;
+      margin-bottom: 1rem;
+      font-family: supria-sans-condensed, sans-serif; }
+  .search-landing-buckets__link {
+    text-align: center;
+    padding: 14px;
+    display: block;
+    border: 1px solid #dddddd;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    height: 100%;
+    color: #1A67A2;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .search-landing-buckets__link[aria-current=true], .search-landing-buckets__link:hover, .search-landing-buckets__link:focus {
+      background-color: #FFCC00;
+      color: #000; }
 
 .long-filters {
   padding-left: 2rem;
