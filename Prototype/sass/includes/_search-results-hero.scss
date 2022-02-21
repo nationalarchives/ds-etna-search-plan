@@ -2,6 +2,12 @@
     background-color: $color__grey-1;
     padding: 2rem;
     padding-bottom: 0;
+
+    @media only screen and (max-width: $screen__md) {
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+
     &__heading {
         margin-top: 0;
         font-weight: normal;
@@ -46,6 +52,21 @@
                 display: inline-block;
                 margin-right: 2rem;
                 font-family: $font__supria-sans;
+
+
+
+                @media only screen and (max-width: 35rem) {
+                    margin-right: 0.5rem;
+                }
+
+                @media only screen and (max-width: 30.2rem) {
+                    max-width: 6rem;
+                }
+
+                @media only screen and (max-width: 24rem) {
+                    max-width: 5rem;
+                }
+
                 &-new-search {
                     display: inline-block;
                     margin-left: auto;
@@ -63,6 +84,11 @@
             color: #000000ba;
             border-top: .3rem solid $color__grey-4;
             background-color: #ffffff85;
+
+            @media only screen and (max-width: 24rem) {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
 
             &:visited, &:hover {
                 color: $color__black;
