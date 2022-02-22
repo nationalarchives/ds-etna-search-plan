@@ -3,6 +3,11 @@
     margin-top: 1rem;
     margin-left: 2rem;
     margin-right: 2rem;
+
+    @media only screen and (max-width: $screen__sm) {
+        margin: 0;
+    }
+
     background-color: $color__dark;
 
     &__list {

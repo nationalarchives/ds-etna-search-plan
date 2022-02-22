@@ -11,6 +11,12 @@
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 2rem;
+
+    @media only screen and (max-width: $screen__md) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     &__sidebar {
         background-color: $color__grey-5;
         border: 1px solid $color__grey-3;
@@ -27,6 +33,13 @@
         border-top: 4px dotted $color__grey-4;
         margin-left: 1rem;
         padding: 1rem;
+
+        @media only screen and (max-width: $screen__sm) {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+        }
+
         -ms-grid-column: 2;
 
         @media only screen and (max-width: $screen__xl) {
