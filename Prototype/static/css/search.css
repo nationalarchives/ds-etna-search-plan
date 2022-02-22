@@ -4654,14 +4654,33 @@ a:visited {
   align-items: flex-end;
   flex-wrap: wrap;
   height: 100%;
-  width: 32rem;
   margin-bottom: 0;
   justify-content: space-evenly;
+}
+@media only screen and (min-width: 48rem) {
+  .header__nav-list {
+    width: 32rem;
+  }
+}
+@media only screen and (max-width: 48rem) {
+  .header__nav-list {
+    padding-left: 0;
+  }
 }
 .header__nav-list-item {
   list-style: none;
   height: 3rem;
   display: block;
+}
+@media only screen and (max-width: 48rem) {
+  .header__nav-list-item {
+    margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 35rem) {
+  .header__nav-list-item {
+    margin-right: 0.25rem;
+  }
 }
 .header__nav-list-item-link {
   display: block;

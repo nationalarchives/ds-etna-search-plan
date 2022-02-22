@@ -33,13 +33,30 @@
             align-items: flex-end;
             flex-wrap: wrap;
             height: 100%;
-            width: 32rem;
+
+            @media only screen and (min-width: $screen__md) {
+                width: 32rem;
+            }
+
+            @media only screen and (max-width: $screen__md) {
+                padding-left: 0;
+            }
+            
             margin-bottom: 0;
             justify-content: space-evenly;
             &-item {
                 list-style: none;
                 height: 3rem;
                 display: block;
+
+                @media only screen and (max-width: $screen__md) {
+                    margin-right: 1rem;
+                }
+
+                @media only screen and (max-width: 35rem) {
+                    margin-right: 0.25rem;
+                }
+
                 &-link {
                     display: block;
                     color: $color__black;
