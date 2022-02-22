@@ -1,22 +1,31 @@
 <li class="search-results__list-card">
     <div class="search-results__list-card-content">
         <h4 class="search-results__list-card-heading">
-            <a href="#" class="search-results__list-card-link"><span class="sr-only">[catalogue reference]: </span>Churchill</a>
+            <a href="#" class="search-results__list-card-link"><span class="sr-only">{{card.ref}} </span>{{card.title}}</a>
         </h4>
-        <p class="search-results__list-card-description">Admiralty, and Ministry of Defence, Navy Department: Submarine Logs. Churchill.</p>
+        <p class="search-results__list-card-description">{{card.description}}</p>
         <ul class="search-results__list-card-metadata">
             <li class="search-results__list-card-metadata-item">
-                Held by: The National Archives, Kew - Admiralty, Navy, Royal Marines, and Coastguard</li>
+                Held by: {{card.held_by}}</li>
             <li class="search-results__list-card-metadata-item">
-                Date: 10 September 1970 - 13 October 1970.
+                Date: {{card.date}}
             </li>
             <li class="search-results__list-card-metadata-item">
-                Catalogue reference: ADM 173/29613
+                Catalogue reference: {{card.ref}}
             </li>
         </ul>
     </div>
+
+    {% if card.downloadable %}
     <div class="search-results__list-card-delivery-options">
-        <a href="#" aria-hidden="true" tabindex="-1"><img src="https://via.placeholder.com/150x150" class="search-results__list-card-delivery-options-img" alt="" /></a>
-        <a href="#" class="search-results__list-card-delivery-options-link"><p class="search-results__list-card-delivery-options-desc"><span class="sr-only">[Record title] is </span>Available to download and view online</p></a>
+        <a href="#" aria-hidden="true" tabindex="-1">
+            <img src="{{card.image}}" class="search-results__list-card-delivery-options-img" alt="" />
+        </a>
+        <a href="#" class="search-results__list-card-delivery-options-link">
+            <p class="search-results__list-card-delivery-options-desc">
+                <span class="sr-only">{{card.ref}}: {{card.title}} is </span>Available to download and view online
+            </p>
+        </a>
     </div>
+    {% endif %}
 </li>

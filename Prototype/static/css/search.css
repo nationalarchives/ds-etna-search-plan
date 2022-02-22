@@ -4825,6 +4825,7 @@ a:visited {
   margin-left: 9rem;
 }
 .search-landing-hero__label {
+  display: block;
   font-family: supria-sans-condensed, sans-serif;
   font-size: 1.4rem;
 }
@@ -5218,6 +5219,7 @@ a:visited {
   margin-right: auto;
   margin-bottom: 2rem;
   padding-right: 1rem;
+  max-width: 60rem;
 }
 .search-results__list-card-link {
   color: #1A67A2;
@@ -5504,10 +5506,13 @@ a:visited {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .long-filters__form-filters-list-item {
   list-style: none;
   margin-right: 4rem;
+  width: 20rem;
+  vertical-align: text-top;
 }
 .long-filters__form-filters-checkbox {
   margin-right: 0.2rem;
@@ -5517,6 +5522,8 @@ a:visited {
 }
 .long-filters__form-filters-label {
   cursor: pointer;
+  max-width: 85%;
+  vertical-align: top;
 }
 .long-filters__form-search {
   background-color: #dddddd;

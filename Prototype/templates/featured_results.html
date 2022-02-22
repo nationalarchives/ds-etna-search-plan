@@ -8,9 +8,9 @@
         <div class="featured-search-grid__results">
             <h2 class="featured-results__heading">Records from The National Archives</h2>
             <ul class="search-results__list">
+            {% for card in cards %}
                 {% include 'includes/search_results__list-card.html' %}
-                {% include 'includes/search_results__list-card.html' %}
-                {% include 'includes/search_results__list-card.html' %}
+            {% endfor %}
             </ul>
             <p><a href="#">See all results from The National Archives (42,403)</a></p>
 
@@ -22,8 +22,8 @@
                 </div>
                 <div class="featured-results__record-creator-description">
                     <h2 class="featured-results__record-creator-heading--smaller">Record creators</h2>
-                    <h3 class="featured-results__record-creator-heading"><a href="#" class="featured-results__record-creator-link">Churchill</a></h3>
-                    <p class="featured-results__record-creator-paragraph">Churchill Parish, Churchill, Oxfordshire</p>
+                    <h3 class="featured-results__record-creator-heading"><a href="https://discovery.nationalarchives.gov.uk/details/c/F60057" class="featured-results__record-creator-link">Macky, John</a></h3>
+                    <p class="featured-results__record-creator-paragraph">(d 1726), secret agent</p>
                     <p class="featured-results__record-creator-paragraph"><a href="#">See all record creators</a></p>
                 </div>
     
@@ -48,12 +48,12 @@
                             </div>
                         </a>
                             <div>
-                                <a href='#' class="featured-results__sidebar-card-link">
+                                <a href='https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/intelligence-and-security-services/' class="featured-results__sidebar-card-link">
                                     <h3>
-                                            Prime Minister's Office records
+                                        Intelligence and security services
                                     </h3>
                                 </a>
-                                <p>This guide will tell you how to find records of the Prime Minister's Office between 1916 and the early 1980s.</p>
+                                <p>This guide will help you to find records held at The National Archives of, and relating to, the British intelligence and security services.</p>
                             </div>
                 
                     </div>
