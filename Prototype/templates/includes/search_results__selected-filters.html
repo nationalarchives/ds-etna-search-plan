@@ -1,19 +1,12 @@
+{% if filters %}
 <h3 class="sr-only">Selected filters</h3>
         <ul class="search-results__selected-filters">
-
+            {% for filter in filters %}
             <li class="search-results__selected-filters-item">
-                Date: 1500 - 2022
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
+                {{filter}}
+                <a href="/search/catalogue" class="search-results__selected-filters-item-link"><span class="sr-only">Remove {{filter}} from search</span></a>
             </li>
-            <li class="search-results__selected-filters-item">
-                Collection: HO
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
-            </li>
-            <li class="search-results__selected-filters-item">
-                Topic: Intelligence
-                <a href="#" class="search-results__selected-filters-item-link"><span class="sr-only">Remove [filter] from search</span></a>
-            </li>
-            <li class="search-results__selected-filters-item-remove-all">
-                <a href="#" class="search-results__selected-filters-item-remove-all-link">Remove all filters</a>
-            </li>
+            {% endfor %}
         </ul>
+
+{% endif %}

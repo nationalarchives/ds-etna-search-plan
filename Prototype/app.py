@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 from forms.catalogue_search import CatalogueSearch
 from forms.featured_results import FeaturedResults
 from forms.landing_search import LandingSearch
@@ -41,11 +41,19 @@ def search():
 @app.route("/search/catalogue/")
 def catalogue_results():
     form = CatalogueSearch(request.args, meta = {'csrf': False})
+    filters = []
+    if len(request.args) > 1:
+        filters = [
+            'Collection: HO - Home Office',
+            'Topic: Intelligence',
+            'Online only'
+        ]        
+
     return render_template("catalogue_results.html", form=form, search_type="Catalogue results", search_term="secret agents", selected_tab={'catalogue': True},
     buckets = [
         ('Records from The National Archives', '(751)', True),
         ('Online records from The National Archives', '(179)', False),
-        ('Records from other UK archives', '(836)', False),
+        ('Records from other UK archives', '(836)', False, url_for('other_archive_results')),
         ('Record creators', '(1)', False),
         ('Find an archive', '(0)', False)
     ],
@@ -104,7 +112,9 @@ def catalogue_results():
             'downloadable': True,
             'image': '/static/images/records/3.png'
         },
-    ]);
+    ],
+    filters = filters,
+    catalogue_results = True);
 
 @app.route("/search/featured/")
 def featured_results():
@@ -154,3 +164,64 @@ def long_filters():
     else:
         form = LongFiltersCollection(request.args, meta = {'csrf': False})
     return render_template("long_filters.html", form=form)
+
+
+@app.route("/search/other/")
+def other_archive_results():
+    form = CatalogueSearch(request.args, meta = {'csrf': False})
+    filters = []
+    if len(request.args) > 1:
+        filters = [
+            'Collection: HO - Home Office',
+            'Topic: Intelligence',
+            'Online only'
+        ]        
+
+    return render_template("other_archive_results.html", form=form, search_type="Catalogue results", search_term="secret agents", selected_tab={'catalogue': True},
+    buckets = [
+        ('Records from The National Archives', '(751)', False, 
+        url_for('catalogue_results')),
+        ('Online records from The National Archives', '(179)', False),
+        ('Records from other UK archives', '(836)', True, url_for('other_archive_results')),
+        ('Record creators', '(1)', False),
+        ('Find an archive', '(0)', False)
+    ],
+    cards = [
+        {
+            'title': 'letters to John Ellis ',
+            'ref': 'Add MSS 28882-94 passim',
+            'date': '1698 - 1705',
+            'held_by': 'British Library, Manuscript Collections',
+            'description': 'letters to John Ellis',
+            'downloadable': False,
+            'image': 'https://via.placeholder.com/150x150'
+        },
+        {
+            'title': """Slow poisoning of peoples minds: 'possible that secret agents may be endeavouring to... """,
+            'ref': '152M/C1816/OH80',
+            'date': '2 Feb. 1816',
+            'held_by': 'Devon Archives and Local Studies Service (South West Heritage Trust)',
+            'description': """Slow poisoning of peoples minds: 'possible that secret agents may be endeavouring to enslave a free nation by establishing a different rule and making Gods of all such individuals as they choose to prescribe' - W Smyth to H.A.""",
+            'downloadable': False,
+            'image': 'https://via.placeholder.com/150x150'
+        },
+        {
+            'title': 'letters (11) to Sir Robert Walpole',
+            'ref': 'Cholmondeley (Houghton)',
+            'held_by': 'Cambridge University Library: Department of Manuscripts and University Archives',
+            'description': 'letters (11) to Sir Robert Walpole',
+            'downloadable': False,
+            'image': 'https://via.placeholder.com/150x150'
+        },
+        {
+            'title': 'letters (copies) to James Vernon ',
+            'ref': 'Add MSS 40771, 40772, 40775 passim',
+            'date': '1698,1701',
+            'held_by': 'Cambridge University Library: Department of Manuscripts and University Archives',
+            'description': 'letters (11) to Sir Robert Walpole',
+            'downloadable': False,
+            'image': 'https://via.placeholder.com/150x150'
+        }
+    ],
+    filters = filters,
+    catalogue_results = False);

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content%}
+    <form class="search-form" method="GET">
+        {% include 'includes/search_hero.html' %}
+
+            {% with buckets = buckets %}
+                {% include 'includes/search_buckets.html' %}
+            {% endwith %}
+
+        {% include 'includes/search_sort_and_view_options.html' %}
+        <div class="catalogue-search-grid">
+            <div class="catalogue-search-grid__sidebar">
+                {% include 'includes/search_filters.html' %}
+                {% include 'includes/search_export_and_share.html' %}
+                
+            </div>
+            <div class="catalogue-search-grid__results">
+                {% include 'includes/search_results.html' %}
+            </div>
+        </div>
+    </form>
+
+    {% include 'includes/pagination.html' %}
+{% endblock %}

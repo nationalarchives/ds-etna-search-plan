@@ -11,7 +11,8 @@ class CatalogueSearch(FlaskForm):
         render_kw={
             'class': 'search-results-hero__form-search-box',
             'role': 'search',
-        }
+        },
+        default='secret agents'
     )
 
     online_only = BooleanField('Show online records only', 
@@ -119,8 +120,10 @@ class CatalogueSearch(FlaskForm):
         'class': 'search-filters__opening-date',
         'placeholder': 'YYYY',
         'aria-labelledby': 'record_opening_date opening_date_from',
-        'aria-describedby': 'search_filters__opening-date-help-text'
+        'aria-describedby': 'search_filters__opening-date-help-text',
+        
     },
+    default=None,
     validators=[NumberRange(min=974, max=2022)])
 
     opening_date_from_mm = IntegerField('Opening date (from month)', render_kw = {
@@ -163,6 +166,18 @@ class CatalogueSearch(FlaskForm):
     },
     validators=[NumberRange(min=1, max=31)])
 
+    other_archive_1 = BooleanField('London Metropolitan Archives: City of London (123)', render_kw = {
+        'class': 'search-filters__checkbox'
+    })
+
+    other_archive_2 = BooleanField('Lancashire Archives (53)', render_kw = {
+        'class': 'search-filters__checkbox'
+    })
+
+    other_archive_3 = BooleanField('British Library: Asian and African Studies (56)', render_kw = {
+        'class': 'search-filters__checkbox'
+    })
+
     class Meta:
         dates = [
             'date_unknown',
@@ -191,4 +206,9 @@ class CatalogueSearch(FlaskForm):
             'closure_open',
             'closure_closed',
             'closure_retained',
+        ]
+        held_by = [
+            'other_archive_1',
+            'other_archive_2',
+            'other_archive_3'
         ]

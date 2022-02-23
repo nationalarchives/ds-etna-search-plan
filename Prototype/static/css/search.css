@@ -5430,6 +5430,9 @@ a:visited {
 .featured-results__sidebar-card-image-fallback {
   max-width: 100%;
 }
+.featured-results__sidebar-card-description {
+  max-width: 20rem;
+}
 
 .search-landing-buckets {
   margin-left: 2rem;
