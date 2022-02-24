@@ -11,16 +11,16 @@ app.config['SECRET_KEY'] = SECRET_KEY
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", explore=True)
 
 @app.route("/search/")
 def search():
     form = LandingSearch(request.args, meta = {'csrf': False})
     return render_template("search_landing.html", form=form,
     collection_buckets = [
-        ('Collection #1', '(n)', False),
-        ('Collection #2', '(n)', False),
-        ('Collection #3', '(n)', False),
+        ('WO 409/27', '(23)', False),
+        ('FCO 50', '(1,423)', False),
+        ('IR 59', '(2)', False),
     ],
     catalogue_buckets = [
         ('Records from The National Archives', '(12m)', False),
@@ -30,8 +30,8 @@ def search():
         ('Find an archive', '(3k)', False)
     ],
     website_buckets = [
-        ('Highlights', '(n)', False),
-        ('Insights', '(n)', False),
+        ('Highlights', '(10)', False),
+        ('Insights', '(5)', False),
         ('Blogs', '(1740)', False),
         ('Videos and podcasts', '(1050)', False),
         ('Research guides', '(360)', False)
@@ -277,7 +277,7 @@ def other_archive_results():
     catalogue_results = False,
     current_bucket_label='Records from other UK archives');
 
-@app.route("/explore")
+@app.route("/explore/")
 def explore():
 
     return render_template("explore.html", explore=True)

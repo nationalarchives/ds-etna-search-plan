@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header__logo-holder">
-    <a href="/search" class="header__logo-link"
+    <a href="/" class="header__logo-link"
       ><img
         src="{{ url_for('static', filename='images/tna-square-white-logo.svg') }}"
         class="header__logo-image"
@@ -10,7 +10,7 @@
   <nav class="header__nav">
     <ul class="header__nav-list">
       <li class="header__nav-list-item">
-        <a class="header__nav-list-item-link" href="#" {% if explore %} aria-current="true" {% endif %}>Explore</a>
+        <a class="header__nav-list-item-link" href="/explore" {% if explore %} aria-current="true" {% endif %}>Explore</a>
       </li>
       <li class="header__nav-list-item">
         <a class="header__nav-list-item-link" href="#">What's on</a>

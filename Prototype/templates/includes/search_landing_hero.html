@@ -1,10 +1,12 @@
 <div class="search-landing-hero">
-    <h1 class="search-landing-hero__heading">Search</h1>
-    <div class="search-landing-hero__form">
-        <label for="search_term" class="search-landing-hero__label">
-            <span class="sr-only">Enter search term.</span> For example, naturalisation or medal cards
-        </label>
-        {{ form.search_term }}
-        <input type="submit" value="Search" class="search-landing-hero__form-submit">
+    <div class="search-landing-hero__container">
+        <h1 class="search-landing-hero__heading">Search</h1>
+        <div class="search-landing-hero__form">
+            <label for="search_term" class="search-landing-hero__label">
+                <span class="sr-only">Enter search term.</span> For example, naturalisation or medal cards
+            </label>
+            {{ form.search_term }}
+            <input type="submit" value="Search" class="search-landing-hero__form-submit">
+        </div>
     </div>
 </div>
