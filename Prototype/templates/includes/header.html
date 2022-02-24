@@ -10,7 +10,7 @@
   <nav class="header__nav">
     <ul class="header__nav-list">
       <li class="header__nav-list-item">
-        <a class="header__nav-list-item-link" href="#">Explore</a>
+        <a class="header__nav-list-item-link" href="#" {% if explore %} aria-current="true" {% endif %}>Explore</a>
       </li>
       <li class="header__nav-list-item">
         <a class="header__nav-list-item-link" href="#">What's on</a>
@@ -22,7 +22,9 @@
         <a class="header__nav-list-item-link" href="#">Learn</a>
       </li>
       <li class="header__nav-list-item">
-        <a class="header__nav-list-item-link header__nav-list-item-link-search" href="/search" aria-current="true">
+
+        <a class="header__nav-list-item-link header__nav-list-item-link-search" href="/search" 
+        {% if not explore %} aria-current="true" {% else %} id='search-nav-link' {% endif %} >
             <span class="sr-only">Search</span></a>
       </li>
     </ul>

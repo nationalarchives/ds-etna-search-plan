@@ -166,15 +166,15 @@ class CatalogueSearch(FlaskForm):
     },
     validators=[NumberRange(min=1, max=31)])
 
-    other_archive_1 = BooleanField('London Metropolitan Archives: City of London (123)', render_kw = {
+    other_archive_1 = BooleanField('British Library, Manuscript Collections (123)', render_kw = {
         'class': 'search-filters__checkbox'
     })
 
-    other_archive_2 = BooleanField('Lancashire Archives (53)', render_kw = {
+    other_archive_2 = BooleanField('Devon Archives and Local Studies Service (South West Heritage Trust) (53)', render_kw = {
         'class': 'search-filters__checkbox'
     })
 
-    other_archive_3 = BooleanField('British Library: Asian and African Studies (56)', render_kw = {
+    other_archive_3 = BooleanField('Cambridge University Library: Department of Manuscripts and University Archives (56)', render_kw = {
         'class': 'search-filters__checkbox'
     })
 

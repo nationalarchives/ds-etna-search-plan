@@ -8,8 +8,13 @@
         -ms-grid-columns: 1fr;
     }
 
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+    @media only screen and (min-width: $screen__md) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
     margin-top: 2rem;
 
     &__sidebar {

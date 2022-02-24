@@ -42,12 +42,114 @@ def search():
 def catalogue_results():
     form = CatalogueSearch(request.args, meta = {'csrf': False})
     filters = []
-    if len(request.args) > 1:
-        filters = [
-            'Collection: HO - Home Office',
-            'Topic: Intelligence',
-            'Online only'
-        ]        
+    online_only = False
+    if len(request.args) > 0:     
+
+        online_only = request.args.get('online_only')
+        topic = request.args.get('topic')
+        collection = request.args.get('collection')
+
+        if online_only == 'y':
+            filters.append('Online only')
+
+        if topic == 'intelligence':
+            print('topic', topic)
+            filters.append('Topic: Intelligence')
+
+        if collection == 'HO':
+            filters.append('Collection: HO - Home Office')
+
+
+    if not online_only:
+        # Include offline records if online_only isn't checked
+        cards = [
+            {
+                'title': 'Visa arrangements for secret agents',
+                'ref': 'HO 213/2056 ',
+                'date': '1943 - 1945',
+                'held_by': 'The National Archives, Kew',
+                'description': 'Visa arrangements for secret agents',
+                'downloadable': False,
+                'image': 'https://via.placeholder.com/150x150'
+            },
+            {
+                'title': 'Medal card of Moussabini, P Corps: Secret Service Intelligence Department ...',
+                'ref': 'WO 372/14/127377 ',
+                'date': '1914 - 1920',
+                'held_by': 'The National Archives, Kew',
+                'description': 'Medal card of Moussabini, P',
+                'downloadable': True,
+                'image': '/static/images/records/1.png'
+            },
+            {
+                'title': 'Folio 37: Recommends secret agent.',
+                'ref': 'PRO 30/22/20/9',
+                'date': '1859 July 17',
+                'held_by': 'The National Archives, Kew',
+                'description': 'Folio 37: Recommends secret agent.',
+                'downloadable': False,
+                'image': 'https://via.placeholder.com/150x150'
+            },
+            {
+                'title': 'James MacGIBBON / Jean Margaret MacGIBBON: British. Information from a secret source...',
+                'ref': 'KV 2/1670',
+                'date': '1950 Jan 01 - 1950 Dec 31 ',
+                'held_by': 'The National Archives, Kew',
+                'description': """James MacGIBBON / Jean Margaret MacGIBBON: British. Information from a secret source indicated that MACGIBBON had performed 'a service' for the Soviets during the Second World War, for which he was rewarded. He was investigated and eventually interviewed,but denied the allegation. He was never brought to trial""",
+                'downloadable': True,
+                'image': '/static/images/records/2.png'
+            },
+            {
+                'title': 'Etzdorf Papers: Secret Agent reports',
+                'ref': 'GFM 33/128/114',
+                'date': ' 1939 - 1940',
+                'held_by': 'The National Archives, Kew',
+                'description': "Etzdorf Papers: Secret Agent reports ",
+                'downloadable': False,
+                'image': '/static/images/records/2.png'
+            },
+            {
+                'title': 'Johannes ROERIG: German. As London correspondent of a Cologne newspaper, ROERIG...',
+                'ref': 'KV 2/3704',
+                'date': '1926 Aug 26 - 1947 Dec 10',
+                'held_by': 'The National Archives, Kew',
+                'description': """Johannes ROERIG: German. As London correspondent of a Cologne newspaper, ROERIG published a secret British report on the steel industry in 1930 which led to the suspicion that he was working for German Intelligence. He returned to Germany in 1939""",
+                'downloadable': True,
+                'image': '/static/images/records/3.png'
+            },
+        ]
+    else:
+        cards = [
+
+            {
+                'title': 'Medal card of Moussabini, P Corps: Secret Service Intelligence Department ...',
+                'ref': 'WO 372/14/127377 ',
+                'date': '1914 - 1920',
+                'held_by': 'The National Archives, Kew',
+                'description': 'Medal card of Moussabini, P',
+                'downloadable': True,
+                'image': '/static/images/records/1.png'
+            },
+            {
+                'title': 'James MacGIBBON / Jean Margaret MacGIBBON: British. Information from a secret source...',
+                'ref': 'KV 2/1670',
+                'date': '1950 Jan 01 - 1950 Dec 31 ',
+                'held_by': 'The National Archives, Kew',
+                'description': """James MacGIBBON / Jean Margaret MacGIBBON: British. Information from a secret source indicated that MACGIBBON had performed 'a service' for the Soviets during the Second World War, for which he was rewarded. He was investigated and eventually interviewed,but denied the allegation. He was never brought to trial""",
+                'downloadable': True,
+                'image': '/static/images/records/2.png'
+            },
+            {
+                'title': 'Johannes ROERIG: German. As London correspondent of a Cologne newspaper, ROERIG...',
+                'ref': 'KV 2/3704',
+                'date': '1926 Aug 26 - 1947 Dec 10',
+                'held_by': 'The National Archives, Kew',
+                'description': """Johannes ROERIG: German. As London correspondent of a Cologne newspaper, ROERIG published a secret British report on the steel industry in 1930 which led to the suspicion that he was working for German Intelligence. He returned to Germany in 1939""",
+                'downloadable': True,
+                'image': '/static/images/records/3.png'
+            },
+        ]
+
 
     return render_template("catalogue_results.html", form=form, search_type="Catalogue results", search_term="secret agents", selected_tab={'catalogue': True},
     buckets = [
@@ -57,64 +159,10 @@ def catalogue_results():
         ('Record creators', '(1)', False),
         ('Find an archive', '(0)', False)
     ],
-    cards = [
-        {
-            'title': 'Visa arrangements for secret agents',
-            'ref': 'HO 213/2056 ',
-            'date': '1943 - 1945',
-            'held_by': 'The National Archives, Kew',
-            'description': 'Visa arrangements for secret agents',
-            'downloadable': False,
-            'image': 'https://via.placeholder.com/150x150'
-        },
-        {
-            'title': 'Medal card of Moussabini, P Corps: Secret Service Intelligence Department ...',
-            'ref': 'WO 372/14/127377 ',
-            'date': '1914 - 1920',
-            'held_by': 'The National Archives, Kew',
-            'description': 'Medal card of Moussabini, P',
-            'downloadable': True,
-            'image': '/static/images/records/1.png'
-        },
-        {
-            'title': 'Folio 37: Recommends secret agent.',
-            'ref': 'PRO 30/22/20/9',
-            'date': '1859 July 17',
-            'held_by': 'The National Archives, Kew',
-            'description': 'Folio 37: Recommends secret agent.',
-            'downloadable': False,
-            'image': 'https://via.placeholder.com/150x150'
-        },
-        {
-            'title': 'James MacGIBBON / Jean Margaret MacGIBBON: British. Information from a secret source...',
-            'ref': 'KV 2/1670',
-            'date': '1950 Jan 01 - 1950 Dec 31 ',
-            'held_by': 'The National Archives, Kew',
-            'description': """James MacGIBBON / Jean Margaret MacGIBBON: British. Information from a secret source indicated that MACGIBBON had performed 'a service' for the Soviets during the Second World War, for which he was rewarded. He was investigated and eventually interviewed,but denied the allegation. He was never brought to trial""",
-            'downloadable': True,
-            'image': '/static/images/records/2.png'
-        },
-        {
-            'title': 'Etzdorf Papers: Secret Agent reports',
-            'ref': 'GFM 33/128/114',
-            'date': ' 1939 - 1940',
-            'held_by': 'The National Archives, Kew',
-            'description': "Etzdorf Papers: Secret Agent reports ",
-            'downloadable': False,
-            'image': '/static/images/records/2.png'
-        },
-        {
-            'title': 'Johannes ROERIG: German. As London correspondent of a Cologne newspaper, ROERIG...',
-            'ref': 'KV 2/3704',
-            'date': '1926 Aug 26 - 1947 Dec 10',
-            'held_by': 'The National Archives, Kew',
-            'description': """Johannes ROERIG: German. As London correspondent of a Cologne newspaper, ROERIG published a secret British report on the steel industry in 1930 which led to the suspicion that he was working for German Intelligence. He returned to Germany in 1939""",
-            'downloadable': True,
-            'image': '/static/images/records/3.png'
-        },
-    ],
+    cards = cards,
     filters = filters,
-    catalogue_results = True);
+    catalogue_results = True,
+    current_bucket_label = 'Records from The National Archives');
 
 @app.route("/search/featured/")
 def featured_results():
@@ -161,9 +209,11 @@ def long_filters():
 
     if formType == 'topics':
         form = LongFiltersTopic(request.args, meta = {'csrf': False})
+        apply_filters_url = '/search/catalogue?topic=intelligence'
     else:
         form = LongFiltersCollection(request.args, meta = {'csrf': False})
-    return render_template("long_filters.html", form=form)
+        apply_filters_url = '/search/catalogue?collection=HO'
+    return render_template("long_filters.html", form=form, apply_filters_url=apply_filters_url)
 
 
 @app.route("/search/other/")
@@ -224,4 +274,10 @@ def other_archive_results():
         }
     ],
     filters = filters,
-    catalogue_results = False);
+    catalogue_results = False,
+    current_bucket_label='Records from other UK archives');
+
+@app.route("/explore")
+def explore():
+
+    return render_template("explore.html", explore=True)

@@ -7,12 +7,16 @@
     &__record-creator {
         padding: 1rem;
         background-color: $color__grey_1;
-        display: flex;
 
-        &-description {
-            margin-right: auto;
-            margin-left: 2rem;
+        @media only screen and (min-width: $screen__sm) {
+            display: flex;
+
+            &-description {
+                margin-left: 2rem;
+                margin-right: auto;
+            }
         }
+
 
         &-heading {
             font-family: $font__supria-sans;
@@ -55,9 +59,6 @@
                 }
             }
 
-            &-description {
-                max-width: 20rem;
-            }
         }
     }
 }

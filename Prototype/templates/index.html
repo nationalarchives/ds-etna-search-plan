@@ -1,13 +1,17 @@
 {% extends "layout.html" %}
 
 {% block content%}
-<h1>Search prototype</h1>
-<ul>
-    <li><a href="{{url_for('search')}}">Search landing</a></li>
-    <li><a href="{{url_for('featured_results')}}">Featured results</a></li>
-    <li><a href="{{url_for('catalogue_results')}}">Catalogue results</a></li>
-    <li><a href="{{url_for('long_filters')}}">Long filters</a></li>
-
-</ul>
+<div class="container">
+    <h1>Search prototype</h1>
+    <ul>
+        <li><a href="{{url_for('search')}}">Search landing</a></li>
+        <li><a href="{{url_for('featured_results')}}">Featured results</a></li>
+        <li><a href="{{url_for('catalogue_results')}}">Catalogue results</a></li>
+        <li><a href="{{url_for('long_filters')}}">Long filters</a></li>
+        <li><a href="{{url_for('explore')}}">Explore (Global Search component)</a></li>
+    
+    </ul>
+    
+</div>
 
 {% endblock %}

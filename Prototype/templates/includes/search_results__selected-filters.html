@@ -6,7 +6,11 @@
                 {{filter}}
                 <a href="/search/catalogue" class="search-results__selected-filters-item-link"><span class="sr-only">Remove {{filter}} from search</span></a>
             </li>
+           
             {% endfor %}
+            <li class="search-results__selected-filters-item-remove-all">
+                <a href="/search/catalogue" class="search-results__selected-filters-item-remove-all-link">Remove all filters</a>
+            </li>
         </ul>
 
 {% endif %}
