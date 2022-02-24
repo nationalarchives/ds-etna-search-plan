@@ -80,14 +80,11 @@
 
                     &-search {
                         width: 3rem;
-                        background-image: url('/static/icons/search-white.svg');
+                        background-image: url('/static/icons/search-black.svg');
                         background-repeat: no-repeat;
                         background-position-x: center;
                         background-position-y: 0.4rem;
                         background-size: 1.5rem;
-                        &[aria-current=true] {
-                            background-image: url('/static/icons/search-black.svg');
-                        }
                     }
                 }
             }
