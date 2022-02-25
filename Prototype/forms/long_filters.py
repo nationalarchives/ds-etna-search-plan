@@ -12,43 +12,43 @@ class LongFiltersTopic(FlaskForm):
         }
     )
 
-    filter_1 = BooleanField('Intelligence', render_kw = {
+    filter_1 = BooleanField('Intelligence (214)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_2 = BooleanField('Operations, battles and campaigns', render_kw = {
+    filter_2 = BooleanField('Operations, battles and campaigns (179)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_3 = BooleanField('Conflict', render_kw = {
+    filter_3 = BooleanField('Conflict (173)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_4 = BooleanField('Europe and Russia', render_kw = {
+    filter_4 = BooleanField('Europe and Russia (167)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_5 = BooleanField('International', render_kw = {
+    filter_5 = BooleanField('International (115)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_6 = BooleanField('Americas', render_kw = {
+    filter_6 = BooleanField('Americas (88)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_7 = BooleanField('Navy', render_kw = {
+    filter_7 = BooleanField('Navy (69)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_8 = BooleanField('Radio and television', render_kw = {
+    filter_8 = BooleanField('Radio and television (69)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_9 = BooleanField('Communications', render_kw = {
+    filter_9 = BooleanField('Communications (66)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
-    filter_10 = BooleanField('Personal and family papers', render_kw = {
+    filter_10 = BooleanField('Personal and family papers (64)', render_kw = {
         'class': 'long-filters__form-filters-checkbox'
     })
 
