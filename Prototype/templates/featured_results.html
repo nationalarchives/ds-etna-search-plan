@@ -4,15 +4,25 @@
     <form class="search-form" method="GET" id="featured-results-form">
         {% include 'includes/search_hero.html' %}
     </form>
+    <p class="paragraph--ml-2rem">This page displays an overview of everything on our site that matched your search result.</p>
+
     <div class="featured-search-grid">
         <div class="featured-search-grid__results">
             <h2 class="featured-results__heading">Records from The National Archives</h2>
             <ul class="search-results__list">
-            {% for card in cards %}
+            {% for card in tna_cards %}
                 {% include 'includes/search_results__list-card.html' %}
             {% endfor %}
             </ul>
-            <p><a href="/search/catalogue">See all results from The National Archives (42,403)</a></p>
+            <p><a href="/search/catalogue">See all results from The National Archives (751)</a></p>
+
+            <h2 class="featured-results__heading">Records from other UK archives</h2>
+            <ul class="search-results__list">
+            {% for card in other_archive_cards %}
+                {% include 'includes/search_results__list-card.html' %}
+            {% endfor %}
+            </ul>
+            <p><a href="/search/catalogue">See all results from other UK archives (836)</a></p>
 
             <div class="featured-results__record-creator">
                 <div class="featured-results__record-creator-image">
@@ -85,7 +95,7 @@
                             </div>
                         </a>
                             <div>
-                                <a href='https://beta.nationalarchives.gov.uk/insight-pages/noor-inayat-khan/' class="featured-results__sidebar-card-link">
+                                <a href='#' class="featured-results__sidebar-card-link">
                                     <h3>
                                         Noor-un-nisa Inayat Khan
                                     </h3>
@@ -96,6 +106,7 @@
                     </div>
                 </li>
             </ul>
+            <p><a href="#">See all insights</a></p>
 
             <h2 class="featured-results__sidebar-heading">Blogs</h2>
 
@@ -125,6 +136,8 @@
                     </div>
                 </li>
             </ul>
+            <p><a href="#">See all blog posts</a></p>
+
         </div>
 
     </div>

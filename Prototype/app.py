@@ -162,7 +162,7 @@ def catalogue_results():
     cards = cards,
     filters = filters,
     catalogue_results = True,
-    current_bucket_label = 'Records from The National Archives');
+    current_bucket_label = 'Records from The National Archives', result_amount=751);
 
 @app.route("/search/featured/")
 def featured_results():
@@ -172,7 +172,7 @@ def featured_results():
     search_type="Catalogue results", 
     search_term="secret agents", 
     selected_tab={'featured': True},
-    cards=[
+    tna_cards=[
         {
             'title': 'Visa arrangements for secret agents',
             'ref': 'HO 213/2056 ',
@@ -200,7 +200,33 @@ def featured_results():
             'downloadable': False,
             'image': 'https://via.placeholder.com/150x150'
         },
-    ]);
+    ],
+    other_archive_cards = [{
+            'title': 'letters to John Ellis ',
+            'ref': 'Add MSS 28882-94 passim',
+            'date': '1698 - 1705',
+            'held_by': 'British Library, Manuscript Collections',
+            'description': 'letters to John Ellis',
+            'downloadable': False,
+            'image': 'https://via.placeholder.com/150x150'
+        },
+        {
+            'title': """Slow poisoning of peoples minds: 'possible that secret agents may be endeavouring to... """,
+            'ref': '152M/C1816/OH80',
+            'date': '2 Feb. 1816',
+            'held_by': 'Devon Archives and Local Studies Service (South West Heritage Trust)',
+            'description': """Slow poisoning of peoples minds: 'possible that secret agents may be endeavouring to enslave a free nation by establishing a different rule and making Gods of all such individuals as they choose to prescribe' - W Smyth to H.A.""",
+            'downloadable': False,
+            'image': 'https://via.placeholder.com/150x150'
+        },
+        {
+            'title': 'letters (11) to Sir Robert Walpole',
+            'ref': 'Cholmondeley (Houghton)',
+            'held_by': 'Cambridge University Library: Department of Manuscripts and University Archives',
+            'description': 'letters (11) to Sir Robert Walpole',
+            'downloadable': False,
+            'image': 'https://via.placeholder.com/150x150'
+        }]);
 
 @app.route("/search/long-filters/")
 def long_filters():
@@ -275,7 +301,7 @@ def other_archive_results():
     ],
     filters = filters,
     catalogue_results = False,
-    current_bucket_label='Records from other UK archives');
+    current_bucket_label='Records from other UK archives', result_amount=836);
 
 @app.route("/explore/")
 def explore():
