@@ -18,7 +18,7 @@ let globalSearch = function () {
 
         <div class="global-search__container">
             <h1 class="global-search__heading">Search</h1>
-            <form class="global-search__form" action='/search/featured/' method='GET'>
+            <form class="global-search__form" action='/search/featured/' method='GET' id='global-search-form'>
                 <label for="search_term" class="global-search__label">
                     <span class="sr-only">Enter search term.</span> For example, naturalisation or medal cards
                 </label>
