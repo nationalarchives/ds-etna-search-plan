@@ -22,7 +22,7 @@ let globalSearch = function () {
                 <label for="search_term" class="global-search__label">
                     <span class="sr-only">Enter search term.</span> For example, naturalisation or medal cards
                 </label>
-                <input type='search' class='global-search__form-search-box' >
+                <input type='search' class='global-search__form-search-box' id='search_term' >
                 <input type="submit" value="Search" class="global-search__form-submit">
             </form>
             <p class='global-search__paragraph'>Other ways to find things:</p>
