@@ -43,6 +43,7 @@ def catalogue_results():
     form = CatalogueSearch(request.args, meta = {'csrf': False})
     filters = []
     online_only = False
+    result_amount = 751
     if len(request.args) > 0:     
 
         online_only = request.args.get('online_only')
@@ -50,13 +51,16 @@ def catalogue_results():
         collection = request.args.get('collection')
 
         if online_only == 'y':
+            result_amount = 179
             filters.append('Online only')
 
         if topic == 'intelligence':
+            result_amount = 214
             print('topic', topic)
             filters.append('Topic: Intelligence')
 
         if collection == 'HO':
+            result_amount = 326
             filters.append('Collection: HO - Home Office')
 
 
@@ -153,7 +157,7 @@ def catalogue_results():
 
     return render_template("catalogue_results.html", form=form, search_type="Catalogue results", search_term="secret agents", selected_tab={'catalogue': True},
     buckets = [
-        ('Records from The National Archives', '(751)', True),
+        ('Records from The National Archives', f'({result_amount})', True),
         ('Online records from The National Archives', '(179)', False),
         ('Records from other UK archives', '(836)', False, url_for('other_archive_results')),
         ('Record creators', '(1)', False),
@@ -162,7 +166,7 @@ def catalogue_results():
     cards = cards,
     filters = filters,
     catalogue_results = True,
-    current_bucket_label = 'Records from The National Archives', result_amount=751);
+    current_bucket_label = 'Records from The National Archives', result_amount=result_amount);
 
 @app.route("/search/featured/")
 def featured_results():
@@ -246,16 +250,13 @@ def long_filters():
 def other_archive_results():
     form = CatalogueSearch(request.args, meta = {'csrf': False})
     filters = []
+    result_amount = 836
     if len(request.args) > 1:
-        filters = [
-            'Collection: HO - Home Office',
-            'Topic: Intelligence',
-            'Online only'
-        ]        
+        result_amount = 529     
 
     return render_template("other_archive_results.html", form=form, search_type="Catalogue results", search_term="secret agents", selected_tab={'catalogue': True},
     buckets = [
-        ('Records from The National Archives', '(751)', False, 
+        ('Records from The National Archives', f'({result_amount})', False, 
         url_for('catalogue_results')),
         ('Online records from The National Archives', '(179)', False),
         ('Records from other UK archives', '(836)', True, url_for('other_archive_results')),
@@ -301,7 +302,7 @@ def other_archive_results():
     ],
     filters = filters,
     catalogue_results = False,
-    current_bucket_label='Records from other UK archives', result_amount=836);
+    current_bucket_label='Records from other UK archives', result_amount=result_amount);
 
 @app.route("/explore/")
 def explore():
