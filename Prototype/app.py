@@ -173,7 +173,7 @@ def featured_results():
     form = FeaturedResults(request.args, meta = {'csrf': False})
     return render_template("featured_results.html", 
     form=form, 
-    search_type="Catalogue results", 
+    search_type="Featured results", 
     search_term="secret agents", 
     selected_tab={'featured': True},
     tna_cards=[
@@ -308,3 +308,7 @@ def other_archive_results():
 def explore():
 
     return render_template("explore.html", explore=True)
+
+@app.route("/details/")
+def details():
+    return render_template("details.html", explore=True)  

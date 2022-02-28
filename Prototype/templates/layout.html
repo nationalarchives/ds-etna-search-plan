@@ -9,6 +9,9 @@
     <title>Search prototype</title>
 </head>
 <body>
+    {% if config['DEBUG'] %}
+    <h5 class="ml-4">This is the local dev environment</h5>
+{% endif %}
     <a id="skip-to-main-content" href="#main-content" class="sr-only sr-only-focusable">Skip to Main Content</a>
     {% include 'includes/header.html' %}
     <main id="main-content">

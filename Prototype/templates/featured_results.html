@@ -8,7 +8,7 @@
 
     <div class="featured-search-grid">
         <div class="featured-search-grid__results">
-            <h2 class="featured-results__heading">Records from The National Archives</h2>
+            <h3 class="featured-results__heading">Records from The National Archives</h3>
             <ul class="search-results__list">
             {% for card in tna_cards %}
                 {% include 'includes/search_results__list-card.html' %}
@@ -16,7 +16,7 @@
             </ul>
             <p><a href="/search/catalogue">See all results from The National Archives (751)</a></p>
 
-            <h2 class="featured-results__heading">Records from other UK archives</h2>
+            <h3 class="featured-results__heading">Records from other UK archives</h3>
             <ul class="search-results__list">
             {% for card in other_archive_cards %}
                 {% include 'includes/search_results__list-card.html' %}
@@ -27,7 +27,7 @@
             <div class="featured-results__record-creator">
                 <div class="featured-results__record-creator-image">
                     <a href="#" aria-hidden="true" tabindex="-1">
-                        <img src="https://via.placeholder.com/250x200" alt="" />
+                        <img src="https://via.placeholder.com/250x200" />
                     </a>
                 </div>
                 <div class="featured-results__record-creator-description">
@@ -46,7 +46,7 @@
             <ul class="featured-results__sidebar-card-list">
                 <li class="featured-results__sidebar-card-list-item">
                     <div>
-                        <a href='#' aria-hidden="true" tabindex="-1">
+                        <a href='#' aria-hidden="true" tabindex="-1" class="featured-results__sidebar-card-link">
                             <div>
                                 <picture>
                                     <!-- <source media="(max-width: 768px)" srcset="https://via.placeholder.com/508x304">
@@ -83,7 +83,7 @@
             <ul class="featured-results__sidebar-card-list">
                 <li class="featured-results__sidebar-card-list-item">
                     <div>
-                        <a href='#' aria-hidden="true" tabindex="-1">
+                        <a href='#' aria-hidden="true" tabindex="-1" class="featured-results__sidebar-card-link">
                             <div>
                                 <picture>
                                     <source media="(max-width: 768px)" srcset="/static/images/insights/1.jpg">
@@ -113,7 +113,7 @@
             <ul class="featured-results__sidebar-card-list">
                 <li class="featured-results__sidebar-card-list-item">
                     <div>
-                        <a href='#' aria-hidden="true" tabindex="-1">
+                        <a href='#' aria-hidden="true" tabindex="-1" class="featured-results__sidebar-card-link">
                             <div>
                                 <picture>
                                     <source media="(max-width: 768px)" srcset="/static/images/blogs/1.jpg">

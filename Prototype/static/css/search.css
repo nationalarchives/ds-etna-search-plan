@@ -4182,7 +4182,8 @@ a {
     outline-color: #8EC0EC; }
 
 .featured-results__heading {
-  font-family: supria-sans-condensed, sans-serif; }
+  font-family: supria-sans-condensed, sans-serif;
+  font-size: 1.5rem; }
 .featured-results__record-creator {
   padding: 1rem;
   background-color: #F1F1F1; }
