@@ -6,7 +6,12 @@
         {% include 'includes/search_results__selected-filters.html' %}
     </div>
     <h3 class="sr-only">Results</h3>
-    <ul class="search-results__list">
+
+    {% if grid %}
+        <ul class="search-results__list--grid">
+    {% else %}
+        <ul class="search-results__list">
+    {% endif %}
         {% for card in cards %}
             {% include 'includes/search_results__list-card.html' %}
         {% endfor %}

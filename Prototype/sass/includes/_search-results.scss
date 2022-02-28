@@ -52,6 +52,15 @@
     &__list {
         list-style: none;
         padding-left: 0;
+
+        &--grid {
+            @extend .search-results__list;
+
+            @media only screen and (min-width: $screen__md) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
     }
 
     &__export, &__share {

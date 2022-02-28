@@ -7,6 +7,12 @@
     margin-bottom: 1.5rem;
     display: flex;
     flex-wrap: wrap;
+
+    &--grid {
+        @extend .search-results__list-card;
+        margin-right: 1rem;
+    }
+
     &-heading {
         font-family: $font__supria-sans;
         font-size: 1.7rem;
@@ -34,6 +40,8 @@
     }
 
     &-delivery-options {
+
+
         margin-right: 1rem;
 
         &-img {
@@ -51,6 +59,16 @@
         }
 
         @media only screen and (max-width: $screen__md) {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            &-desc {
+                max-width: 100%;
+            }
+        }
+
+        &--grid {
+            @extend .search-results__list-card-delivery-options;
             margin-left: auto;
             margin-right: auto;
             text-align: center;

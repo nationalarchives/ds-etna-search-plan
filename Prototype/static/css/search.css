@@ -4011,9 +4011,13 @@ a {
       list-style: none;
       padding-left: 0;
       padding-right: 0; }
-.search-results__list {
+.search-results__list, .search-results__list--grid {
   list-style: none;
   padding-left: 0; }
+  @media only screen and (min-width: 48rem) {
+    .search-results__list--grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
 .search-results__export-container, .search-results__share-container {
   background-color: #dddddd;
   border: 1px solid #cccccc;
@@ -4032,7 +4036,7 @@ a {
   height: 35px;
   width: 35px; }
 
-.search-results__list-card {
+.search-results__list-card, .search-results__list-card--grid {
   list-style: none;
   padding: 1.5rem;
   border: 1px solid #dddddd;
@@ -4041,6 +4045,8 @@ a {
   margin-bottom: 1.5rem;
   display: flex;
   flex-wrap: wrap; }
+  .search-results__list-card--grid {
+    margin-right: 1rem; }
   .search-results__list-card-heading {
     font-family: supria-sans-condensed, sans-serif;
     font-size: 1.7rem;
@@ -4056,7 +4062,7 @@ a {
       color: #1A67A2; }
   .search-results__list-card-description {
     margin-bottom: 0.5rem; }
-  .search-results__list-card-delivery-options {
+  .search-results__list-card-delivery-options, .search-results__list-card-delivery-options--grid {
     margin-right: 1rem; }
     .search-results__list-card-delivery-options-img {
       border: 1px solid #6f777b; }
@@ -4067,12 +4073,18 @@ a {
     .search-results__list-card-delivery-options-link {
       display: block; }
     @media only screen and (max-width: 48rem) {
-      .search-results__list-card-delivery-options {
+      .search-results__list-card-delivery-options, .search-results__list-card-delivery-options--grid {
         margin-left: auto;
         margin-right: auto;
         text-align: center; }
         .search-results__list-card-delivery-options-desc {
           max-width: 100%; } }
+    .search-results__list-card-delivery-options--grid {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; }
+      .search-results__list-card-delivery-options--grid-desc {
+        max-width: 100%; }
 
 .pagination {
   margin-top: 1rem;

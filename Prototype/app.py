@@ -42,14 +42,17 @@ def search():
 def catalogue_results():
     form = CatalogueSearch(request.args, meta = {'csrf': False})
     filters = []
+    grid = False
     online_only = False
     result_amount = 751
-    if len(request.args) > 0:     
+    request_prefix='?'
 
+    if len(request.args) > 0:     
+        request_prefix = '&'
         online_only = request.args.get('online_only')
         topic = request.args.get('topic')
         collection = request.args.get('collection')
-
+        grid_view = request.args.get('grid')
         if online_only == 'y':
             result_amount = 179
             filters.append('Online only')
@@ -62,6 +65,11 @@ def catalogue_results():
         if collection == 'HO':
             result_amount = 326
             filters.append('Collection: HO - Home Office')
+
+        if grid_view == 'y':
+            grid = True
+
+        
 
 
     if not online_only:
@@ -166,7 +174,9 @@ def catalogue_results():
     cards = cards,
     filters = filters,
     catalogue_results = True,
-    current_bucket_label = 'Records from The National Archives', result_amount=result_amount);
+    current_bucket_label = 'Records from The National Archives', result_amount=result_amount, 
+    grid=grid,
+    request_prefix=request_prefix);
 
 @app.route("/search/featured/")
 def featured_results():
