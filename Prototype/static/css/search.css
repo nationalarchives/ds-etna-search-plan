@@ -3635,7 +3635,7 @@ a {
           .header__nav-list-item-link:visited {
             color: #000000; }
           .header__nav-list-item-link:hover, .header__nav-list-item-link[aria-current=true], .header__nav-list-item-link:focus {
-            background-color: #F1F1F1;
+            background-color: #ffffff;
             color: #000000; }
           .header__nav-list-item-link:focus {
             outline-color: #000000; }
@@ -3646,6 +3646,8 @@ a {
             background-position-x: center;
             background-position-y: 0.4rem;
             background-size: 1.5rem; }
+            .header__nav-list-item-link-search:hover, .header__nav-list-item-link-search[aria-current=true], .header__nav-list-item-link-search:focus {
+              background-color: #F1F1F1; }
 
 .search-results-hero {
   background-color: #F1F1F1;
