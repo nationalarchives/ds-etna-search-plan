@@ -5,7 +5,7 @@ from wtforms.fields import SearchField, BooleanField
 class LongFiltersTopic(FlaskForm):
 
     search_within = SearchField(
-        'Search within filters',
+        'Search for a filter',
         render_kw={
             'class': 'long-filters__form-search-box',
             'role': 'search',
@@ -59,7 +59,7 @@ class LongFiltersTopic(FlaskForm):
 class LongFiltersCollection(FlaskForm):
 
     search_within = SearchField(
-        'Search within filters',
+        'Search for a filter',
         render_kw={
             'class': 'long-filters__form-search-box',
             'role': 'search',

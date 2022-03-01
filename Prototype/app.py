@@ -165,7 +165,7 @@ def catalogue_results():
 
     return render_template("catalogue_results.html", form=form, search_type="Catalogue results", search_term="secret agents", selected_tab={'catalogue': True},
     buckets = [
-        ('Records from The National Archives', f'({result_amount})', True),
+        ('Records from The National Archives', '(751)', True),
         ('Online records from The National Archives', '(179)', False),
         ('Records from other UK archives', '(836)', False, url_for('other_archive_results')),
         ('Record creators', '(1)', False),
@@ -176,7 +176,8 @@ def catalogue_results():
     catalogue_results = True,
     current_bucket_label = 'Records from The National Archives', result_amount=result_amount, 
     grid=grid,
-    request_prefix=request_prefix);
+    request_prefix=request_prefix,
+    total_amount=751);
 
 @app.route("/search/featured/")
 def featured_results():
@@ -266,7 +267,7 @@ def other_archive_results():
 
     return render_template("other_archive_results.html", form=form, search_type="Catalogue results", search_term="secret agents", selected_tab={'catalogue': True},
     buckets = [
-        ('Records from The National Archives', f'({result_amount})', False, 
+        ('Records from The National Archives', '751', False, 
         url_for('catalogue_results')),
         ('Online records from The National Archives', '(179)', False),
         ('Records from other UK archives', '(836)', True, url_for('other_archive_results')),
@@ -312,7 +313,8 @@ def other_archive_results():
     ],
     filters = filters,
     catalogue_results = False,
-    current_bucket_label='Records from other UK archives', result_amount=result_amount);
+    current_bucket_label='Records from other UK archives', result_amount=result_amount,
+    total_amount=836);
 
 @app.route("/explore/")
 def explore():
@@ -321,4 +323,4 @@ def explore():
 
 @app.route("/details/")
 def details():
-    return render_template("details.html", explore=True)  
+    return render_template("details.html")  
