@@ -4324,8 +4324,7 @@ a {
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 3px dotted #dddddd;
-    display: flex;
-    flex-direction: row-reverse; }
+    margin-bottom: 2rem; }
   .long-filters__submit-button {
     font-size: 1.3rem;
     cursor: pointer; }
