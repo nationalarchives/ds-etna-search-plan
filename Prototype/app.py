@@ -267,7 +267,7 @@ def other_archive_results():
 
     return render_template("other_archive_results.html", form=form, search_type="Catalogue results", search_term="secret agents", selected_tab={'catalogue': True},
     buckets = [
-        ('Records from The National Archives', '751', False, 
+        ('Records from The National Archives', '(751)', False, 
         url_for('catalogue_results')),
         ('Online records from The National Archives', '(179)', False),
         ('Records from other UK archives', '(836)', True, url_for('other_archive_results')),
