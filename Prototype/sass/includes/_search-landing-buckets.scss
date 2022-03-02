@@ -1,10 +1,18 @@
 .search-landing-buckets {
-    margin-left: 2rem;
-    margin-right: 2rem;
+
+    @media only screen and (min-width: $screen__md) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
     &__heading {
         margin-left: 4rem;
         font-family: $font__supria-sans;
         font-size: 1.5rem;
+
+        @media only screen and (max-width: $screen__md) {
+            margin-left: 2rem;
+        }
     }
 
     &__container {

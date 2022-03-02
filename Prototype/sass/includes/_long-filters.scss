@@ -1,6 +1,11 @@
 .long-filters {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    @media only screen and (min-width: $screen__md) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
     &__heading {
         font-family: $font__supria-sans;
     }
@@ -10,15 +15,26 @@
         padding-bottom: 2rem;
         margin-bottom: 2rem;
         border-bottom: 3px dotted $color__grey-4;
-        display: flex;
-        justify-content: space-between;
+
+        @media only screen and (min-width: $screen__md) {
+            display: flex;
+            justify-content: space-between;
+        }
+
     }
 
     &__form {
-        display: flex;
+        @media only screen and (min-width: $screen__md) {
+            display: flex;
+            &-filters {
+                margin-left: 2rem;
+            }
+        }
 
         &-filters {
-            margin-left: 2rem;
+            @media only screen and (max-width: $screen__md) {
+               margin-top: 2rem;
+            }
 
             &-list {
                 padding-left: 0;
@@ -29,7 +45,8 @@
                 &-item {
                     list-style: none;
                     margin-right: 4rem;
-                    width: 20rem;
+                    width: 100%;
+                    max-width: 20rem;
                     vertical-align: text-top;
                 }
             }
@@ -63,7 +80,8 @@
                 cursor: pointer;
             }
             &-box {
-                width: 15rem;
+                width: 100%;
+                max-width: 15rem;
                 margin-bottom: 0.5rem;
                 border: 1px solid $color__grey-3;
                 border-radius: 0.5rem;
