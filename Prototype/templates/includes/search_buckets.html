@@ -1,8 +1,8 @@
 <nav class="search-buckets">
     <ul class="search-buckets__list" data-id="search-buckets-list">
         {% for bucket in buckets %}
-        <li class="search-buckets__list-item"><a href="{{bucket[3]}}" class="search-buckets__link"  
-            {% if bucket[2] %} aria-current="true" {% endif %}>{{bucket[0]}} {{bucket[1]}}</a></li>
+        <li class="search-buckets__list-item" data-current="{{bucket[2]}}"><a href="{{bucket[3]}}" class="search-buckets__link"  
+            {% if bucket[2] %} aria-current="true" {% else %} aria-current="falsee" {% endif %}>{{bucket[0]}} {{bucket[1]}}</a></li>
         {% endfor %}
     </ul>
 </nav>
