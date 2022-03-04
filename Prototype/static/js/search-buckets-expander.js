@@ -14,7 +14,7 @@ let searchBucketsExpander = function() {
     $showHideButton.setAttribute('aria-expanded', false);
     $showHideButton.setAttribute('aria-label', 'Show or hide result categories');
     $showHideButton.hidden = true;
-    $searchBuckets.append($showHideButton);
+    $searchBuckets.prepend($showHideButton);
 
 
     let ariaControls = ""
