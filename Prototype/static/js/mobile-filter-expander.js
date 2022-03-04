@@ -11,7 +11,7 @@ let mobileFilterExpander = function() {
 
 
     let $showHideButton = document.createElement('button');
-    $showHideButton.innerText = 'Show or hide filters';
+    $showHideButton.innerText = 'Show search filters';
     $showHideButton.classList.add('search-results__filter-button');
     $showHideButton.setAttribute('aria-expanded', false);
     $showHideButton.setAttribute('aria-controls', 'searchFilterContainer');
@@ -25,8 +25,15 @@ let mobileFilterExpander = function() {
         e.preventDefault();
         let ariaExpanded = $showHideButton.getAttribute('aria-expanded') == 'true';
         $showHideButton.setAttribute('aria-expanded', !ariaExpanded);
-
+        let newAriaExpanded = $showHideButton.getAttribute('aria-expanded') == 'true';
         $searchFilterContainer.hidden = !$searchFilterContainer.hidden;
+
+        if(newAriaExpanded) {
+            $showHideButton.innerHTML = 'Hide search filters';
+        }
+        else {
+            $showHideButton.innerHTML = 'Show search filters';
+        }
         
         
     });
