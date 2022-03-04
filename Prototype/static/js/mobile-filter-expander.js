@@ -15,7 +15,7 @@ let mobileFilterExpander = function() {
     $showHideButton.classList.add('search-results__filter-button');
     $showHideButton.setAttribute('aria-expanded', false);
     $showHideButton.setAttribute('aria-controls', 'searchFilterContainer');
-    $showHideButton.setAttribute('aria-label', 'Show/hide filters');
+    $showHideButton.setAttribute('aria-label', 'Show or hide filters');
     $showHideButton.hidden = true;
     $searchForm.insertBefore($showHideButton, $searchGrid);
 

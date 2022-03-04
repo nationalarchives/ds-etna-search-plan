@@ -15,11 +15,12 @@
     }
 
     &__form {
-
+        display: flex;
         &-submit {
             @extend .tna-button;
             cursor: pointer;
             width: 8rem;
+            height: 3.1rem;
             font-size: 1.1rem;
         }
 

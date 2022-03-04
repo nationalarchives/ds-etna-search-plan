@@ -1,5 +1,5 @@
 <nav class="search-landing-buckets">
-    <ul class="search-landing-buckets__list">
+    <ul class="search-landing-buckets__list" data-id="search-buckets-list">
         {% for bucket in buckets %}
         <li class="search-landing-buckets__list-item"><a href="#" class="search-landing-buckets__link"  
             {% if bucket[2] %} aria-current="true" {% endif %}>{{bucket[0]}} {{bucket[1]}}</a></li>

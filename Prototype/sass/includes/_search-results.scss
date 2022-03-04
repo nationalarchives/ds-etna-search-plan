@@ -102,6 +102,11 @@
         position: relative;
         font-weight: bold;
 
+        &:focus {
+            outline: 5px solid $color__focus-blue-outline-light-bg;
+
+        }
+
         @media only screen and (max-width: $screen__md) {
             margin-left: 1.5rem;
         }
@@ -123,6 +128,18 @@
             &:before {
                 background-image: url('/static/icons/triangle-down.svg');
             }
+        }
+    }
+
+    &__bucket-button {
+        @extend .search-results__filter-button;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+        display: block;
+        &:before {
+            position: relative;
         }
     }
 }
