@@ -130,16 +130,4 @@
             }
         }
     }
-
-    &__bucket-button {
-        @extend .search-results__filter-button;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0rem;
-        margin-bottom: 1rem;
-        display: block;
-        &:before {
-            position: relative;
-        }
-    }
 }

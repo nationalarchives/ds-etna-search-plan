@@ -1,8 +1,7 @@
 let mobileFilterExpander = function() {
-    let $searchFilterContainer = document.querySelector('.catalogue-search-grid__sidebar');
-
-    let $searchGrid = document.querySelector('.catalogue-search-grid');
-    let $searchForm = document.querySelector('.search-form');
+    let $searchGrid = document.querySelector('div[data-id="catalogue-search-grid"]');
+    let $searchFilterContainer = document.querySelector('div[data-id="catalogue-search-sidebar"]');
+    let $searchForm = document.querySelector('form[data-id="search-form"]');
 
     if(!$searchFilterContainer || !$searchGrid || !$searchForm) {
         return;

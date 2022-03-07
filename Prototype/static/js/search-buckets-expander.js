@@ -10,7 +10,7 @@ let searchBucketsExpander = function() {
 
     let $showHideButton = document.createElement('button');
     $showHideButton.innerText = 'Show more result categories';
-    $showHideButton.classList.add('search-results__bucket-button');
+    $showHideButton.classList.add('search-buckets__toggle-button');
     $showHideButton.setAttribute('aria-expanded', false);
     $showHideButton.setAttribute('aria-label', 'Show or hide result categories');
     $showHideButton.hidden = true;

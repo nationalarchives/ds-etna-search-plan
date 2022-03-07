@@ -1,6 +1,6 @@
 
 let globalSearch = function () {
-    let $gsFallbackLink = document.querySelector("#search-nav-link");
+    let $gsFallbackLink = document.querySelector("a[data-id='search-nav-link']");
     let $main = document.querySelector('main');
     if(!$gsFallbackLink) {
         return;
