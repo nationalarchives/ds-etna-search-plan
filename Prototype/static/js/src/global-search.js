@@ -1,19 +1,21 @@
-
-let globalSearch = function () {
+export default function () {
     let $gsFallbackLink = document.querySelector("a[data-id='search-nav-link']");
     let $main = document.querySelector('main');
+
     if(!$gsFallbackLink) {
         return;
     }
-    
+
     $gsFallbackLink.outerHTML = `<button aria-expanded="false" aria-controls="gs-component" aria-label="Show/hide global search" type="button" id="gs-show-hide" class="global-search__button">
         <span class="sr-only">Search</span>
       </button>`;
-    
-    $gsToggleButton = document.querySelector('#gs-show-hide');
 
+    let $gsToggleButton = document.querySelector('#gs-show-hide');
 
     let $globalSearchComponent = document.createElement('div');
+    $globalSearchComponent.hidden = true;
+    $globalSearchComponent.id = 'gs-component';
+    $globalSearchComponent.classList.add('global-search'); 
     $globalSearchComponent.innerHTML = `
 
         <div class="global-search__container">
@@ -31,25 +33,14 @@ let globalSearch = function () {
                 <li class='global-search__list-item'><a href=''>Explore the collection</a> through topics and time periods</li>
                 <li class='global-search__list-item'><a href=''>Discover Insights</a> for unique stories behind our collection.</li>
             </ul>
-        
-        </div>
-   
-        `;
-    $globalSearchComponent.hidden = true;
-    $globalSearchComponent.id = 'gs-component';
-    $globalSearchComponent.classList.add('global-search');    
+        </div>`;
 
-    $main.prepend($globalSearchComponent);
+    $main.insertBefore($globalSearchComponent, $main.childNodes[0]); //IE11 compatible prepend
 
     $gsToggleButton.addEventListener('click', function(e) {
         let ariaExpanded = $gsToggleButton.getAttribute('aria-expanded') == 'true';
         $gsToggleButton.setAttribute('aria-expanded', !ariaExpanded);
 
         $globalSearchComponent.hidden = !$globalSearchComponent.hidden;
-        
-        
     })
-
-
-}();
-
+}

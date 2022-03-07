@@ -1,12 +1,14 @@
-let searchBucketsExpander = function() {
+import debounce from './debounce.js';
 
-    $searchBuckets = document.querySelector('.search-buckets');
+export default function() {
+
+    let $searchBuckets = document.querySelector('.search-buckets');
 
     if(!$searchBuckets) {
         return;
     }
 
-    $searchBucketsToHide = document.querySelectorAll("ul[data-id=search-buckets-list] li:not([data-current=True])");
+    let $searchBucketsToHide = document.querySelectorAll("ul[data-id=search-buckets-list] li:not([data-current=True])");
 
     let $showHideButton = document.createElement('button');
     $showHideButton.innerText = 'Show more result categories';
@@ -14,7 +16,7 @@ let searchBucketsExpander = function() {
     $showHideButton.setAttribute('aria-expanded', false);
     $showHideButton.setAttribute('aria-label', 'Show or hide result categories');
     $showHideButton.hidden = true;
-    $searchBuckets.prepend($showHideButton);
+    $searchBuckets.insertBefore($showHideButton, $searchBuckets.childNodes[0]); //IE11 compatible prepend
 
 
     let ariaControls = ""
@@ -75,7 +77,6 @@ let searchBucketsExpander = function() {
                 $bucket.hidden = false;
             }
         }
-    
     }, 200));
 
-}();
+};

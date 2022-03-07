@@ -1,0 +1,21 @@
+{
+  "name": "Prototype",
+  "version": "1.0.0",
+  "description": "1. run `python3 -m venv venv` to setup a virtual environment  2. run `source venv/bin/activate` to activate the virtual environment 3. run `python3 -m pip install -r requirements.txt` to install Flask & Flask-WTF 4. run `export FLASK_DEBUG=True` so the application reloads when you change code 4. run `python3 -m flask run` to run the application ### SASS 1. run `npm i -g sass` 2. run `sass --watch sass/search.scss:static/css/search.css` to watch/build SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-sass": "sass --watch sass/search.scss:static/css/search.css",
+    "start-scripts": "npx webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
