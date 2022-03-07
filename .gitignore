@@ -2,3 +2,4 @@
 __pycache__/
 venv/
 .sass-cache/
+node_modules/
