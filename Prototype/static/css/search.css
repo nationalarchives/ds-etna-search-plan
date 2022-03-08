@@ -4041,6 +4041,18 @@ a {
     background-size: 100%; }
   .search-results__filter-button[aria-expanded=true]:before, [aria-expanded=true].search-buckets__toggle-button:before {
     background-image: url("/static/icons/triangle-down.svg"); }
+.search-results__explainer--desktop {
+  margin-left: 2rem;
+  margin-left: 2rem; }
+  @media only screen and (max-width: 48rem) {
+    .search-results__explainer--desktop {
+      display: none; } }
+.search-results__explainer--mobile {
+  margin-left: 1rem;
+  margin-left: 1rem; }
+  @media only screen and (min-width: 48rem) {
+    .search-results__explainer--mobile {
+      display: none; } }
 
 .search-results__list-card, .search-results__list-card--grid {
   list-style: none;
@@ -4461,9 +4473,5 @@ a {
   .global-search__paragraph {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem; }
-
-.paragraph--ml-2rem {
-  margin-left: 2rem;
-  margin-right: 2rem; }
 
 /*# sourceMappingURL=search.css.map */
