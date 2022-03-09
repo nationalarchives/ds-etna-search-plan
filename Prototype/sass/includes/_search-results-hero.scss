@@ -49,6 +49,7 @@
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+            font-size: 1.2rem;
             &-item {
                 display: inline-block;
                 margin-right: 2rem;
@@ -56,16 +57,21 @@
 
 
 
-                @media only screen and (max-width: 35rem) {
+                @media only screen and (max-width: 38rem) {
                     margin-right: 0.5rem;
                 }
 
-                @media only screen and (max-width: 30.2rem) {
-                    max-width: 6rem;
+                @media only screen and (max-width: 34rem) {
+                    max-width: 7rem;
                 }
 
-                @media only screen and (max-width: 24rem) {
-                    max-width: 5rem;
+                @media only screen and (max-width: 26rem) {
+                    max-width: 6.5rem;
+                }
+
+                @media only screen and (max-width: 23rem) {
+                    max-width: 5.5rem;
+                    font-size: 1.1rem;
                 }
 
                 &-new-search {
