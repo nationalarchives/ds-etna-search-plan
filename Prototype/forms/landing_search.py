@@ -10,7 +10,6 @@ class LandingSearch(FlaskForm):
         validators=[InputRequired()],
         render_kw={
             'class': 'search-results-hero__form-search-box',
-            'role': 'search',
             'placeholder': ''
         }
     )

@@ -8,7 +8,6 @@ class LongFiltersTopic(FlaskForm):
         'Search for a filter',
         render_kw={
             'class': 'long-filters__form-search-box',
-            'role': 'search',
         }
     )
 
@@ -62,7 +61,6 @@ class LongFiltersCollection(FlaskForm):
         'Search for a filter',
         render_kw={
             'class': 'long-filters__form-search-box',
-            'role': 'search',
         }
     )
 

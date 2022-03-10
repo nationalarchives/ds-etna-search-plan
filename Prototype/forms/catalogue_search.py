@@ -10,7 +10,6 @@ class CatalogueSearch(FlaskForm):
         validators=[InputRequired()],
         render_kw={
             'class': 'search-results-hero__form-search-box',
-            'role': 'search',
         },
         default='secret agents'
     )
@@ -24,7 +23,6 @@ class CatalogueSearch(FlaskForm):
         'Search within results',
         render_kw={
             'class': 'search-filters__search',
-            'role': 'search',
             'default': None
         }
     )

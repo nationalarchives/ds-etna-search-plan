@@ -6,7 +6,7 @@
         <input type="submit" value="Search" class="search-results-hero__form-submit">
     </div>
     <h2 class="sr-only">{{search_type}}</h2>
-    <nav class="search-results-hero__nav">
+    <nav class="search-results-hero__nav" aria-label="Search result types">
         <ul class="search-results-hero__nav-list">
             <li class="search-results-hero__nav-list-item">
                 <a class="search-results-hero__nav-link" {% if 'featured' in selected_tab %} aria-current="true" {% else %} href="/search/featured"  {% endif %}>Featured results</a>
