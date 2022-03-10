@@ -41,15 +41,19 @@ export default function() {
     }
 
     window.addEventListener("resize", debounce(() =>{
-
+        let ariaExpanded = $showHideButton.getAttribute('aria-expanded');
         if(window.innerWidth <= 1200) {
             $showHideButton.hidden = false;
-            $searchFilterContainer.hidden = true;
-            $showHideButton.setAttribute('aria-expanded', false);
+
+            if(ariaExpanded === 'false') {
+                $searchFilterContainer.hidden = true;
+            }
+            else {
+                $searchFilterContainer.hidden = false;
+            }
         }
         else {
             $showHideButton.hidden = true;
-            $showHideButton.setAttribute('aria-expanded', false);
             $searchFilterContainer.hidden = false;
         }
     }, 200));
