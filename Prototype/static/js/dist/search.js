@@ -215,14 +215,16 @@ __webpack_require__.r(__webpack_exports__);
   }
 
   window.addEventListener("resize", (0,_debounce_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function () {
+    var ariaExpanded = $showHideButton.getAttribute('aria-expanded');
+
     if (window.innerWidth <= 768) {
       $showHideButton.hidden = false;
-      $showHideButton.setAttribute('aria-expanded', false);
-      $showHideButton.innerHTML = 'Show more result categories';
 
-      for (var _i3 = 0; _i3 < $searchBucketsToHide.length; _i3++) {
-        var _$bucket3 = $searchBucketsToHide[_i3];
-        _$bucket3.hidden = true;
+      if (ariaExpanded === 'false') {
+        for (var _i3 = 0; _i3 < $searchBucketsToHide.length; _i3++) {
+          var _$bucket3 = $searchBucketsToHide[_i3];
+          _$bucket3.hidden = true;
+        }
       }
     } else {
       $showHideButton.hidden = true;

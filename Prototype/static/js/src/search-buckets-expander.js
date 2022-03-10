@@ -57,14 +57,15 @@ export default function() {
     }
 
     window.addEventListener("resize", debounce(() =>{
-
+        let ariaExpanded = $showHideButton.getAttribute('aria-expanded');
         if(window.innerWidth <= 768) {
             $showHideButton.hidden = false;
-            $showHideButton.setAttribute('aria-expanded', false);
-            $showHideButton.innerHTML = 'Show more result categories';
-            for(let i = 0; i < $searchBucketsToHide.length; i++) {
-                let $bucket = $searchBucketsToHide[i];
-                $bucket.hidden = true;
+
+            if(ariaExpanded === 'false') {
+                for(let i = 0; i < $searchBucketsToHide.length; i++) {
+                    let $bucket = $searchBucketsToHide[i];
+                    $bucket.hidden = true;
+                }
             }
         }
         else {
